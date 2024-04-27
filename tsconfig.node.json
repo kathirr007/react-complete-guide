@@ -7,7 +7,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "vite.config.ts"
-    // "unocss.config.ts"
+    "vite.config.*"
   ]
 }
