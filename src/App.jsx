@@ -46,7 +46,18 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton
+            {
+              Object.entries(EXAMPLES).map(([key,value]) => (
+                  <TabButton key={value.title}
+                    isSelected={selectedTopic === key}
+                    onSelect={() => handleSelect(key)}
+                  >
+                    {value.title}
+                  </TabButton>
+                )
+              )
+            }
+            {/* <TabButton
               isSelected={selectedTopic === 'components'}
               onSelect={() => handleSelect('components')}
             >
@@ -69,7 +80,7 @@ function App() {
               onSelect={() => handleSelect('state')}
             >
               State
-            </TabButton>
+            </TabButton> */}
           </menu>
           {tabContent}
         </section>
