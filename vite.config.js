@@ -4,6 +4,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import AutoImport from 'unplugin-auto-import/vite';
 import Pages from 'vite-plugin-pages';
+import Components from 'unplugin-react-components/vite';
 
 import fg from 'fast-glob';
 import { minimatch } from 'minimatch';
@@ -67,9 +68,7 @@ export default defineConfig({
       dts: './auto-imports.d.ts',
       defaultExportByFilename: true,
       eslintrc: {
-        enabled: true,
-        filepath: './.eslintrc-auto-import.json',
-        globalsPropValue: true
+        enabled: true
       },
       include: [
         /\.[tj]sx?$/ // .ts, .tsx, .js, .jsx
@@ -83,8 +82,12 @@ export default defineConfig({
         'react-router'
       ]
     }),
+    /* Components({
+      dts: './components.d.ts',
+      directoryAsNamespace: true,
+      deep: true
+    }), */
     Pages({
-
       extendRoute(route, parent) {
         if (route.path === '/') {
           // Index is unauthenticated.

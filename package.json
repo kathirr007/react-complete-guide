@@ -41,6 +41,7 @@
     "stylelint-scss": "^6.2.1",
     "typescript": "^5.4.5",
     "unplugin-auto-import": "^0.17.5",
+    "unplugin-react-components": "^0.1.4",
     "vite": "^5.2.10",
     "vite-plugin-pages": "^0.32.1"
   }

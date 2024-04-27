@@ -1,6 +1,6 @@
 {
   "globals": {
-    "CommonPlayer": true,
+    "GameBoard": true,
     "Player": true,
     "createRef": true,
     "forwardRef": true,

@@ -3,9 +3,11 @@ function App() {
     <main>
       <div id="game-container">
         <ol id="players">
-          <CommonPlayer name="Player 1" symbol="X" />
-          <CommonPlayer name="Player 2" symbol="O" />
+          <Player name="Player 1" symbol="X" />
+          <Player name="Player 2" symbol="O" />
         </ol>
+
+        <GameBoard />
       </div>
     </main>
   );
