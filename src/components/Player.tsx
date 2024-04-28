@@ -1,11 +1,22 @@
 import type { ChangeEvent } from 'react';
 
-export function Player({ name, symbol }: { name: string;symbol: string }) {
+interface PlayerArgs {
+  name: string;
+  symbol: string;
+  isActive: boolean;
+  onUpdatePlayer: Function;
+}
+
+export function Player({ name, symbol, isActive, onUpdatePlayer }: PlayerArgs) {
   const [playerName, setPlayerName] = useState(name);
   const [isEditing, setIsEditing] = useState(false);
 
-  function handleClick() {
+  function handleSave() {
     setIsEditing(wasEditing => !wasEditing);
+
+    if (isEditing) {
+      onUpdatePlayer(symbol, playerName);
+    }
   }
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
@@ -19,12 +30,12 @@ export function Player({ name, symbol }: { name: string;symbol: string }) {
   }
 
   return (
-    <li>
+    <li className={isActive ? 'active' : undefined}>
       <span className="player">
         {editablePlayerName}
         <span className="player-symbol">{symbol}</span>
       </span>
-      <button type="button" onClick={handleClick}>
+      <button type="button" onClick={handleSave}>
         {isEditing ? 'Save' : 'Edit'}
       </button>
     </li>

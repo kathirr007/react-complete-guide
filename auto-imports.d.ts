@@ -6,6 +6,8 @@
 export {}
 declare global {
   const GameBoard: typeof import('@/components/GameBoard.tsx')['GameBoard']
+  const GameOver: typeof import('@/components/GameOver.tsx')['GameOver']
+  const Logs: typeof import('@/components/Logs.tsx')['Logs']
   const Player: typeof import('@/components/Player.tsx')['Player']
   const createRef: typeof import('react')['createRef']
   const forwardRef: typeof import('react')['forwardRef']
@@ -36,5 +38,6 @@ declare global {
   const useRoutes: typeof import('react-router')['useRoutes']
   const useState: typeof import('react')['useState']
   const useSyncExternalStore: typeof import('react')['useSyncExternalStore']
+  const useTicTacToeGame: typeof import('./src/hooks/useTicTacToeGame')['useTicTacToeGame']
   const useTransition: typeof import('react')['useTransition']
 }

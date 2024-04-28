@@ -31,6 +31,9 @@
     "useRoutes": true,
     "useState": true,
     "useSyncExternalStore": true,
-    "useTransition": true
+    "useTransition": true,
+    "Logs": true,
+    "GameOver": true,
+    "useTicTacToeGame": true
   }
 }
