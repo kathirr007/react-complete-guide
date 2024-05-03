@@ -34,6 +34,11 @@
     "useTransition": true,
     "Logs": true,
     "GameOver": true,
-    "useTicTacToeGame": true
+    "useTicTacToeGame": true,
+    "InvestmentCalculator": true,
+    "TestCalculator": true,
+    "EstimationResult": true,
+    "Header": true,
+    "UserInput": true
   }
 }
