@@ -2,9 +2,9 @@
 
 This repository is the coding practice repository for the course React The Complete Guide by Maximilian Schwarzmüller.
 
-## Section - React Essentials deep dive Practice project (Investment calculator)
+## Section - Styling react components
 
-Investment calculator project using the knowledge learned so far like components, props, fragments, dynamic values etc.
+The section about styling react components including vanilla css, styled components and tailwind css.
 
 ### How To Use
 
