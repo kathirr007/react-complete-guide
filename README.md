@@ -2,9 +2,9 @@
 
 This repository is the coding practice repository for the course React The Complete Guide by Maximilian Schwarzmüller.
 
-## Section - React Essentials deep dive Tic-Tac-Toe Project
+## Section - React Essentials deep dive Practice project (Investment calculator)
 
-Tic-Tac-Toe project using the knowledge learned so far like components, props, fragments, dynamic values etc.
+Investment calculator project using the knowledge learned so far like components, props, fragments, dynamic values etc.
 
 ### How To Use
 
