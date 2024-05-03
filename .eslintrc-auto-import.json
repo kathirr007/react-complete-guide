@@ -39,6 +39,7 @@
     "TestCalculator": true,
     "EstimationResult": true,
     "Header": true,
-    "UserInput": true
+    "UserInput": true,
+    "AuthInputs": true
   }
 }
