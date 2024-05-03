@@ -2,9 +2,9 @@
 
 This repository is the coding practice repository for the course React The Complete Guide by Maximilian Schwarzmüller.
 
-## Section - Styling react components
+## Section - Refs and Portals
 
-The section about styling react components including vanilla css, styled components and tailwind css.
+This section is about how to use Refs and Portals in react application.
 
 ### How To Use
 
