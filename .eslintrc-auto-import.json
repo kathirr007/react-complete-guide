@@ -40,6 +40,8 @@
     "EstimationResult": true,
     "Header": true,
     "UserInput": true,
-    "AuthInputs": true
+    "AuthInputs": true,
+    "TimerChallenge": true,
+    "ResultModal": true
   }
 }
