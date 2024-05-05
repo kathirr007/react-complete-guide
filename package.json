@@ -13,8 +13,7 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "styled-components": "^6.1.9"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.16.0",
@@ -26,6 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
     "eslint": "^9.1.1",
     "eslint-plugin-format": "^0.1.1",
     "eslint-plugin-import": "^2.29.1",
@@ -33,6 +33,7 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "fast-glob": "^3.3.2",
     "minimatch": "^9.0.4",
+    "postcss": "^8.4.38",
     "stylelint": "^16.4.0",
     "stylelint-config-css-modules": "^4.4.0",
     "stylelint-config-html": "^1.1.0",
@@ -40,6 +41,7 @@
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-scss": "^6.2.1",
+    "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-react-components": "^0.1.4",
