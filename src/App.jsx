@@ -1,15 +1,7 @@
-import Player from './components/Player.jsx';
-
 function App() {
   return (
     <>
-      <Player />
-      <div id="challenges">
-        <TimerChallenge title="Easy" targetTime={1} />
-        <TimerChallenge title="Not Easy" targetTime={5} />
-        <TimerChallenge title="Getting Tough" targetTime={10} />
-        <TimerChallenge title="Pros Only" targetTime={15} />
-      </div>
+      <h1 className="my-8 text-center text-5xl font-bold">Hello World</h1>
     </>
   );
 }
