@@ -42,6 +42,12 @@
     "UserInput": true,
     "AuthInputs": true,
     "TimerChallenge": true,
-    "ResultModal": true
+    "ResultModal": true,
+    "ProjectSidebar": true,
+    "BaseInput": true,
+    "NewProject": true,
+    "BaseButton": true,
+    "NoProjectSelected": true,
+    "BaseModal": true
   }
 }
