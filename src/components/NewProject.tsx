@@ -1,17 +1,17 @@
 import React from 'react';
 
 export function NewProject({ onAdd }: { onAdd: Function }) {
-  const title = useRef();
-  const description = useRef();
-  const dueDate = useRef();
+  const title = useRef<HTMLInputElement>(null);
+  const description = useRef<HTMLTextAreaElement>(null);
+  const dueDate = useRef<HTMLInputElement>(null);
   const modal = useRef();
 
   function handleSave() {
-    const enteredTitle = (title.current as unknown as HTMLInputElement).value;
-    const enteredDescription = (description.current as unknown as HTMLInputElement).value;
-    const enteredDueDate = (dueDate.current as unknown as HTMLInputElement).value;
+    const enteredTitle = title.current?.value;
+    const enteredDescription = description.current?.value;
+    const enteredDueDate = dueDate.current?.value;
 
-    if (enteredTitle.trim() === '' || enteredDescription.trim() === '' || enteredDueDate.trim() === '') {
+    if (enteredTitle?.trim() === '' || enteredDescription?.trim() === '' || enteredDueDate?.trim() === '') {
       (modal.current as any)?.open();
       return;
     }
