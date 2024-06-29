@@ -1,12 +1,8 @@
-# React - The Complete Guide Course - Practice
+# React + Vite
 
-This repository is the coding practice repository for the course React The Complete Guide by Maximilian Schwarzmüller.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Section - Refs and Portals
+Currently, two official plugins are available:
 
-This section is about how to use Refs and Portals in react application.
-
-### How To Use
-
-Each branch has the completed code section vise. Checkout to the branch.
-You'll need to run `npm install` or `pnpm install` in the individual branch, followed by `npm run dev` or `pnpm dev` to start the development server.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
