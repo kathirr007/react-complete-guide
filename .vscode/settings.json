@@ -42,5 +42,8 @@
     "toml",
     "gql",
     "graphql"
+  ],
+  "cSpell.words": [
+    "tanstack"
   ]
 }

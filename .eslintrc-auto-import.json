@@ -48,6 +48,19 @@
     "NewProject": true,
     "BaseButton": true,
     "NoProjectSelected": true,
-    "BaseModal": true
+    "BaseModal": true,
+    "EventsEditEvent": true,
+    "EventsEventDetails": true,
+    "EventsEventForm": true,
+    "EventsEventItem": true,
+    "EventsEvents": true,
+    "EventsEventsIntroSection": true,
+    "EventsFindEventSection": true,
+    "EventsNewEvent": true,
+    "EventsNewEventsSection": true,
+    "ImagePicker": true,
+    "UIErrorBlock": true,
+    "UILoadingIndicator": true,
+    "UIModal": true
   }
 }
