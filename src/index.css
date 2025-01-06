@@ -1,31 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap';
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', serif;
+  font-family: Lato, serif;
+  color: #d9e2f1;
+  background: linear-gradient(#222c31, #111d32);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#222c31, #111d32);
-  color: #d9e2f1;
-  min-height: 100vh;
 }
 
 ul {
-  list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 #main-header {
-  margin: 0;
-  padding: 2rem 15%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 2rem 15%;
+  margin: 0;
 }
 
 #main-header-loading {
@@ -37,22 +37,22 @@ ul {
 
 #header-title {
   display: flex;
-  align-items: center;
   gap: 1.5rem;
+  align-items: center;
 }
 
 #header-title img {
   width: 4rem;
   height: 4rem;
-  border-radius: 50%;
   object-fit: cover;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.26));
+  filter: drop-shadow(0 2px 8px rgb(0 0 0 / 26%));
+  border-radius: 50%;
 }
 
 #header-title h1 {
   font-size: 1.5rem;
   color: #fff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  text-shadow: 0 2px 8px rgb(0 0 0 / 26%);
 }
 
 #main-header nav {
@@ -61,15 +61,15 @@ ul {
 }
 
 #overview-section {
-  margin: -8rem 0 3rem 0;
   padding: 8rem 15%;
+  margin: -8rem 0 3rem;
   color: #222c31;
   text-align: center;
 }
 
 #overview-section h2 {
-  font-size: 2.5rem;
   margin: 2rem auto;
+  font-size: 2.5rem;
   color: #1d161a;
 }
 
@@ -78,44 +78,43 @@ ul {
 }
 
 #overview-section p {
+  font-family: Quicksand, sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
-  font-family: 'Quicksand', sans-serif;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.26);
+  text-shadow: 0 2px 2px rgb(0 0 0 / 26%);
 }
 
 .content-section {
-  margin: 3rem 0 6rem 0;
   padding: 0 15%;
+  margin: 3rem 0 6rem;
 }
 
 .content-section h2 {
-  font-size: 2rem;
-  font-family: 'Quicksand', sans-serif;
   margin: 2rem auto;
+  font-family: Quicksand, sans-serif;
+  font-size: 2rem;
   color: #b6cad5;
 }
 
 .events-list {
-  max-width: 60rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 3rem;
+  max-width: 60rem;
 }
 
 .event-item {
-  height: 100%;
-  margin: 2rem 0;
-  padding: 0;
-  border-radius: 4px;
-  background-color: #3c4249;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  gap: 1rem;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 20rem;
+  height: 100%;
+  padding: 0;
+  margin: 2rem 0;
+  overflow: hidden;
+  background-color: #3c4249;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
 }
 
 .event-item img {
@@ -124,69 +123,69 @@ ul {
 }
 
 .event-item-content {
-  height: 100%;
-  padding: 1rem;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
 }
 
 .event-item h2 {
-  font-size: 1.15rem;
-  font-family: 'Lato', sans-serif;
   margin: 0;
+  font-family: Lato, sans-serif;
+  font-size: 1.15rem;
   color: #d7bfcb;
 }
 
 .event-item .event-item-date {
   margin: 0.5rem;
+  font-family: Quicksand, sans-serif;
   font-size: 0.85rem;
-  font-family: 'Quicksand', sans-serif;
 }
 
 .event-item .event-item-location {
   margin: 0.5rem;
+  font-family: Quicksand, sans-serif;
   font-size: 1rem;
-  font-family: 'Quicksand', sans-serif;
 }
 
 #search-form input {
-  font: inherit;
   padding: 0.5rem 1rem;
-  border-radius: 4px 0 0 4px;
-  border: none;
+  font: inherit;
   background: #fff;
+  border: none;
+  border-radius: 4px 0 0 4px;
 }
 
 #search-form button {
-  font: inherit;
   padding: 0.5rem 1rem;
-  border-radius: 0 4px 4px 0;
-  border: none;
-  background: #b6cad5;
-  color: #1d161a;
+  font: inherit;
   font-weight: bold;
+  color: #1d161a;
   cursor: pointer;
+  background: #b6cad5;
+  border: none;
+  border-radius: 0 4px 4px 0;
 }
 
 #event-form label {
   display: block;
-  font-weight: bold;
-  font-size: 0.85rem;
   margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: bold;
   color: #3c4249;
   text-transform: uppercase;
 }
 
 #event-form input,
 #event-form textarea {
+  width: 100%;
+  padding: 0.25rem;
   font: inherit;
   font-size: 1.1rem;
-  padding: 0.25rem;
-  border-radius: 4px;
   border: 1px solid #ccc;
-  width: 100%;
+  border-radius: 4px;
 }
 
 .controls-row {
@@ -196,35 +195,35 @@ ul {
 
 .form-actions {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #image-picker p {
-  font-weight: bold;
-  font-size: 0.85rem;
   margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: bold;
   color: #3c4249;
   text-transform: uppercase;
 }
 
 #image-picker ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
-  overflow-y: auto;
   gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  list-style: none;
 }
 
 #image-picker li {
   width: 4rem;
   height: 3rem;
+  overflow: hidden;
   border: 2px solid transparent;
   border-radius: 4px;
-  overflow: hidden;
 }
 
 #image-picker li.selected {
@@ -238,11 +237,11 @@ ul {
 }
 
 #event-details header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 40rem;
   margin: 2rem auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 #event-details header nav {
@@ -252,46 +251,46 @@ ul {
 
 #event-details header button,
 #event-details header a {
-  font: inherit;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  color: #b6cad5;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
   padding: 0.25rem;
+  font: inherit;
+  font-weight: bold;
+  color: #b6cad5;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
 }
 
 #event-details-content {
   width: 40rem;
   margin: 2rem auto;
+  overflow: hidden;
   background-color: #343b3f;
   border-radius: 8px;
-  overflow: hidden;
 }
 
 #event-details-content img {
   width: 100%;
   height: 20rem;
-  object-fit: cover;
   margin-bottom: 2rem;
+  object-fit: cover;
 }
 
 #event-details-info {
-  padding: 0 3rem 3rem 3rem;
+  padding: 0 3rem 3rem;
 }
 
 #event-details time {
-  font-size: 1.5rem;
   margin: 0.5rem 0;
+  font-size: 1.5rem;
 }
 
 #event-details-location {
-  font-size: 1.15rem;
-  color: #b6cad5;
-  font-weight: bold;
   margin: 0;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #b6cad5;
 }
 
 #event-details-description {
@@ -301,67 +300,66 @@ ul {
 }
 
 .modal {
-  margin: 0;
-  padding: 2rem;
   position: fixed;
   top: 10vh;
   left: calc(50% - 15rem);
-  width: 30rem;
-  max-height: 80vh;
-  background: #e2e5eb;
-  border: none;
-  border-radius: 6px;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 30rem;
+  max-height: 80vh;
+  padding: 2rem;
+  margin: 0;
+  background: #e2e5eb;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
   animation: slide-down-fade-in 300ms ease-out forwards;
 }
 
 .modal::backdrop {
-  height: 100vh;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0 0 0 / 50%);
 }
 
 .nav-item {
-  text-decoration: none;
   color: #b6cad5;
+  text-decoration: none;
 }
 
 .button {
-  font: inherit;
-  cursor: pointer;
   padding: 0.5rem 1.5rem;
-  border: none;
-  background-color: #e30d7c;
-  color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+  font: inherit;
   font-weight: bold;
+  color: #fff;
   text-decoration: none;
+  cursor: pointer;
+  background-color: #e30d7c;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 26%);
 }
 
 .button:hover {
-  background-color: #e30d5b;
   color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background-color: #e30d5b;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
 }
 
 .button-text {
   font: inherit;
+  font-weight: bold;
+  color: #3f0c26;
+  text-decoration: none;
   cursor: pointer;
-  border: none;
   background-color: transparent;
   border: none;
-  color: #3f0c26;
   border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 .button-text:hover {
@@ -369,33 +367,33 @@ ul {
 }
 
 .error-block {
-  background-color: #f0d9e5;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 4px;
-  color: #890b35;
   display: flex;
   gap: 2rem;
   align-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #890b35;
   text-align: left;
+  background-color: #f0d9e5;
+  border-radius: 4px;
 }
 
 .error-block-icon {
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 3rem;
   height: 3rem;
+  font-size: 2rem;
   color: #fff;
   background-color: #890b35;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .error-block h2 {
-  color: inherit;
-  font-size: 1.25rem;
   margin: 0;
+  font-size: 1.25rem;
+  color: inherit;
 }
 
 .error-block p {
@@ -407,30 +405,34 @@ ul {
 }
 
 .lds-ring {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 80px;
   height: 80px;
   margin: 1rem 0;
 }
+
 .lds-ring div {
+  position: absolute;
   box-sizing: border-box;
   display: block;
-  position: absolute;
   width: 64px;
   height: 64px;
   margin: 8px;
   border: 8px solid #e30d5b;
+  border-color: #e30d5b transparent transparent;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #e30d5b transparent transparent transparent;
 }
+
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;
 }
+
 .lds-ring div:nth-child(2) {
   animation-delay: -0.3s;
 }
+
 .lds-ring div:nth-child(3) {
   animation-delay: -0.15s;
 }
@@ -439,6 +441,7 @@ ul {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -449,6 +452,7 @@ ul {
     opacity: 0;
     transform: translateY(-3rem);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
