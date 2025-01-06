@@ -6,10 +6,6 @@ import ErrorBlock from '../UI/ErrorBlock.jsx';
 import EventItem from './EventItem.jsx';
 
 export default function NewEventsSection() {
-  /* const [data, setData] = useState();
-  const [error, setError] = useState();
-  const [isLoading, setIsLoading] = useState(false); */
-
   const { data, error, isLoading, isError } = useQuery({
     queryKey: ['events'],
     queryFn: fetchEvents
