@@ -3,7 +3,7 @@ function App() {
     <>
       <Header />
       <main>
-        <StateLogin />
+        <Signup />
       </main>
     </>
   );
