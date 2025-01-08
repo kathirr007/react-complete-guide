@@ -61,6 +61,7 @@
     "ImagePicker": true,
     "UIErrorBlock": true,
     "UILoadingIndicator": true,
-    "UIModal": true
+    "UIModal": true,
+    "Login": true
   }
 }

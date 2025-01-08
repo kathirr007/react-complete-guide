@@ -1,18 +1,10 @@
-import { useIsFetching } from '@tanstack/react-query';
+import logoImg from '../assets/logo.jpg';
 
-export default function Header({ children }) {
-  const isFetching = useIsFetching();
+export function Header() {
   return (
-    <>
-      <div id="main-header-loading">
-        {isFetching ? <progress /> : null}
-      </div>
-      <header id="main-header">
-        <div id="header-title">
-          <h1>React Events</h1>
-        </div>
-        <nav>{children}</nav>
-      </header>
-    </>
+    <header>
+      <img src={logoImg} alt="A form and a pencil" />
+      <h1>React Forms</h1>
+    </header>
   );
 }
