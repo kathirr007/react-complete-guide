@@ -11,7 +11,8 @@ export function StateLogin() {
     password: false
   });
 
-  const isEmailValid = isTouched.email && !formInput.email.includes('@');
+  const isEmailInvalid = isTouched.email && !formInput.email.includes('@');
+  const isPasswordInvalid = isTouched.password && formInput.password.length < 6;
 
   function handleInputChange(identifier, event) {
     setFormInput(prevInputs => ({
@@ -45,18 +46,28 @@ export function StateLogin() {
       <h2>Login</h2>
 
       <div className="control-row">
-        <div className="control no-margin">
-          <label htmlFor="email">Email</label>
-          <input id="email" type="email" name="email" onBlur={() => handleInputBlur('email')} onChange={event => handleInputChange('email', event)} value={formInput.email} />
-          <div className="control-error">
-            {isEmailValid && <p>Please enter a valid email address.</p>}
-          </div>
-        </div>
+        <Input
+          label="Email"
+          name="email"
+          id="email"
+          type="email"
+          onBlur={() => handleInputBlur('email')}
+          onChange={event => handleInputChange('email', event)}
+          value={formInput.email}
+          error={isEmailInvalid && 'Please enter a valid email address.'}
+        />
 
-        <div className="control no-margin">
-          <label htmlFor="password">Password</label>
-          <input id="password" type="password" name="password" onBlur={() => handleInputBlur('password')} onChange={event => handleInputChange('password', event)} value={formInput.password} />
-        </div>
+        <Input
+          label="Password"
+          name="password"
+          id="password"
+          type="password"
+          onBlur={() => handleInputBlur('password')}
+          onChange={event => handleInputChange('password', event)}
+          value={formInput.password}
+          error={isPasswordInvalid && 'Please enter a password with at-least 6 characters.'}
+        />
+
       </div>
 
       <p className="form-actions">

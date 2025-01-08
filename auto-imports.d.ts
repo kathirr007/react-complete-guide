@@ -24,6 +24,7 @@ declare global {
   const GameOver: typeof import('@/components/GameOver.tsx')['GameOver']
   const Header: typeof import('@/components/Header.jsx')['Header']
   const ImagePicker: typeof import('@/components/ImagePicker.jsx')['ImagePicker']
+  const Input: typeof import('@/components/Input.jsx')['Input']
   const InvestmentCalculator: typeof import('@/components/InvestmentCalculator.tsx')['InvestmentCalculator']
   const Login: typeof import('@/components/Login.jsx')['Login']
   const Logs: typeof import('@/components/Logs.tsx')['Logs']

@@ -64,6 +64,7 @@
     "UIModal": true,
     "Login": true,
     "Signup": true,
-    "StateLogin": true
+    "StateLogin": true,
+    "Input": true
   }
 }
