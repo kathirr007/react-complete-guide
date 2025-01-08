@@ -1,14 +1,30 @@
 import { useState } from 'react';
 
-export function Login() {
+export function StateLogin() {
   const [formInput, setFormInput] = useState({
     email: '',
     password: ''
   });
 
+  const [isTouched, setIsTouched] = useState({
+    email: false,
+    password: false
+  });
+
+  const isEmailValid = isTouched.email && !formInput.email.includes('@');
+
   function handleInputChange(identifier, event) {
     setFormInput(prevInputs => ({
       ...prevInputs, [identifier]: event.target.value
+    }));
+
+    setIsTouched(prevInputs => ({
+      ...prevInputs, [identifier]: false
+    }));
+  }
+  function handleInputBlur(identifier) {
+    setIsTouched(prevInputs => ({
+      ...prevInputs, [identifier]: true
     }));
   }
 
@@ -31,12 +47,15 @@ export function Login() {
       <div className="control-row">
         <div className="control no-margin">
           <label htmlFor="email">Email</label>
-          <input id="email" type="email" name="email" onChange={event => handleInputChange('email', event)} value={formInput.email} />
+          <input id="email" type="email" name="email" onBlur={() => handleInputBlur('email')} onChange={event => handleInputChange('email', event)} value={formInput.email} />
+          <div className="control-error">
+            {isEmailValid && <p>Please enter a valid email address.</p>}
+          </div>
         </div>
 
         <div className="control no-margin">
           <label htmlFor="password">Password</label>
-          <input id="password" type="password" name="password" onChange={event => handleInputChange('password', event)} value={formInput.password} />
+          <input id="password" type="password" name="password" onBlur={() => handleInputBlur('password')} onChange={event => handleInputChange('password', event)} value={formInput.password} />
         </div>
       </div>
 

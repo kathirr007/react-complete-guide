@@ -62,6 +62,8 @@
     "UIErrorBlock": true,
     "UILoadingIndicator": true,
     "UIModal": true,
-    "Login": true
+    "Login": true,
+    "Signup": true,
+    "StateLogin": true
   }
 }

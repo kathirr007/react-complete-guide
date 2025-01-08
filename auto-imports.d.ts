@@ -32,6 +32,8 @@ declare global {
   const Player: typeof import('@/components/Player.jsx')['Player']
   const ProjectSidebar: typeof import('@/components/ProjectSidebar.tsx')['ProjectSidebar']
   const ResultModal: typeof import('@/components/ResultModal.tsx')['ResultModal']
+  const Signup: typeof import('@/components/Signup.jsx')['Signup']
+  const StateLogin: typeof import('@/components/StateLogin.jsx')['StateLogin']
   const TestCalculator: typeof import('@/components/test/Calculator.tsx')['Calculator']
   const TimerChallenge: typeof import('@/components/TimerChallenge.tsx')['TimerChallenge']
   const UIErrorBlock: typeof import('@/components/UI/ErrorBlock.jsx')['ErrorBlock']
