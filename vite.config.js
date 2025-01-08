@@ -1,13 +1,13 @@
 import path from 'node:path';
-import { URL, fileURLToPath } from 'node:url';
-import { defineConfig } from 'vite';
+import { fileURLToPath, URL } from 'node:url';
 import react from '@vitejs/plugin-react';
-import AutoImport from 'unplugin-auto-import/vite';
-import Pages from 'vite-plugin-pages';
-import Components from 'unplugin-react-components/vite';
-
 import fg from 'fast-glob';
 import { minimatch } from 'minimatch';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-react-components/vite';
+
+import { defineConfig } from 'vite';
+import Pages from 'vite-plugin-pages';
 
 function pascalCaseWithCapitals(str) {
   return str

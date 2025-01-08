@@ -55,6 +55,7 @@ declare global {
   const useId: typeof import('react')['useId']
   const useImperativeHandle: typeof import('react')['useImperativeHandle']
   const useInRouterContext: typeof import('react-router')['useInRouterContext']
+  const useInput: typeof import('./src/hooks/useInput.js')['useInput']
   const useInsertionEffect: typeof import('react')['useInsertionEffect']
   const useLayoutEffect: typeof import('react')['useLayoutEffect']
   const useLocation: typeof import('react-router')['useLocation']
