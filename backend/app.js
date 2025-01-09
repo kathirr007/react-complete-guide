@@ -7,7 +7,8 @@ async function loadOpinions() {
     const dbFileData = await fs.readFile('./db.json');
     const parsedData = JSON.parse(dbFileData);
     return parsedData.opinions;
-  } catch (error) {
+  }
+  catch (error) {
     return [];
   }
 }
@@ -23,7 +24,7 @@ async function saveOpinion(opinion) {
 
 async function upvoteOpinion(id) {
   const opinions = await loadOpinions();
-  const opinion = opinions.find((o) => o.id === id);
+  const opinion = opinions.find(o => o.id === id);
   if (!opinion) {
     return null;
   }
@@ -34,7 +35,7 @@ async function upvoteOpinion(id) {
 
 async function downvoteOpinion(id) {
   const opinions = await loadOpinions();
-  const opinion = opinions.find((o) => o.id === id);
+  const opinion = opinions.find(o => o.id === id);
   if (!opinion) {
     return null;
   }
@@ -59,7 +60,8 @@ app.get('/opinions', async (req, res) => {
   try {
     const opinions = await loadOpinions();
     res.json(opinions);
-  } catch (error) {
+  }
+  catch (error) {
     res.status(500).json({ error: 'Error loading opinions.' });
   }
 });
@@ -67,7 +69,7 @@ app.get('/opinions', async (req, res) => {
 app.post('/opinions', async (req, res) => {
   const { userName, title, body } = req.body;
 
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
   if (!userName || !title || !body) {
     return res
@@ -77,40 +79,43 @@ app.post('/opinions', async (req, res) => {
   try {
     const newOpinion = await saveOpinion({ userName, title, body });
     res.status(201).json(newOpinion);
-  } catch (error) {
+  }
+  catch (error) {
     res.status(500).json({ error: 'Error saving opinion.' });
   }
 });
 
 app.post('/opinions/:id/upvote', async (req, res) => {
   const { id } = req.params;
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise(resolve => setTimeout(resolve, 1000));
   try {
     const opinion = await upvoteOpinion(Number(id));
     if (!opinion) {
       return res.status(404).json({ error: 'Opinion not found.' });
     }
     res.json(opinion);
-  } catch (error) {
+  }
+  catch (error) {
     res.status(500).json({ error: 'Error upvoting opinion.' });
   }
 });
 
 app.post('/opinions/:id/downvote', async (req, res) => {
   const { id } = req.params;
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise(resolve => setTimeout(resolve, 1000));
   try {
     const opinion = await downvoteOpinion(Number(id));
     if (!opinion) {
       return res.status(404).json({ error: 'Opinion not found.' });
     }
     res.json(opinion);
-  } catch (error) {
+  }
+  catch (error) {
     console.log(error);
     res.status(500).json({ error: 'Error downvoting opinion.' });
   }
 });
 
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
+app.listen(3010, () => {
+  console.log('Server running on http://localhost:3010');
 });

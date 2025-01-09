@@ -66,6 +66,9 @@
     "Signup": true,
     "StateLogin": true,
     "Input": true,
-    "useInput": true
+    "useInput": true,
+    "NewOpinion": true,
+    "Opinion": true,
+    "Opinions": true
   }
 }

@@ -1,6 +1,6 @@
 import { Header } from './components/Header';
-import { Opinions } from './components/Opinions';
 import { NewOpinion } from './components/NewOpinion';
+import { Opinions } from './components/Opinions';
 import { OpinionsContextProvider } from './store/opinions-context';
 
 function App() {
