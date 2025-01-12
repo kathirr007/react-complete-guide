@@ -4,9 +4,11 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "vite.config.*"
+    "vite.config.*",
+    "./auto-import-utils.ts"
   ]
 }
