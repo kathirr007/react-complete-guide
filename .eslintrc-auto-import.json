@@ -1,7 +1,13 @@
 {
   "globals": {
+    "Bar": true,
+    "Foo": true,
+    "Header": true,
+    "UiInput": true,
     "createRef": true,
     "forwardRef": true,
+    "isDesktop": true,
+    "isMobile": true,
     "lazy": true,
     "memo": true,
     "startTransition": true,
@@ -30,26 +36,6 @@
     "useRoutes": true,
     "useState": true,
     "useSyncExternalStore": true,
-    "useTransition": true,
-    "UiInput": true,
-    "Button": true,
-    "Header": true,
-    "Input": true,
-    "Test": true,
-    "Test2": true,
-    "Test3": true,
-    "Test4": true,
-    "Test5": true,
-    "UiTest5": true,
-    "UiTest4": true,
-    "UiTest6": true,
-    "UiTest7": true,
-    "UiTest": true,
-    "useRest": true,
-    "useRest2": true,
-    "Alert": true,
-    "useTest": true,
-    "useTest2": true,
-    "useTest3": true
+    "useTransition": true
   }
 }

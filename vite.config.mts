@@ -1,7 +1,5 @@
-import { resolve } from 'node:path';
 import { fileURLToPath, URL } from 'node:url';
 import react from '@vitejs/plugin-react';
-import chokidar from 'chokidar';
 import AutoImport from 'unplugin-auto-import/vite';
 import { defineConfig } from 'vite';
 import Pages from 'vite-plugin-pages';
@@ -21,22 +19,21 @@ export default defineConfig({
     AutoImport({
       dts: './auto-imports.d.ts',
       defaultExportByFilename: false,
-      eslintrc: {
-        enabled: true,
-        filepath: './.eslintrc-auto-import.json',
-        globalsPropValue: true
-      },
       include: [
         /\.[tj]sx?$/ // .ts, .tsx, .js, .jsx
       ],
       dirs: [
-        './src/hooks'
+        './src/hooks/**'
       ],
+      eslintrc: {
+        enabled: true
+      },
       imports: [
         ...getComponentImports(),
         'react',
         'react-router'
-      ]
+      ],
+      dumpUnimportItems: true
     }),
     Pages({
       extendRoute(route, parent) {

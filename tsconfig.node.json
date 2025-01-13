@@ -9,6 +9,8 @@
   },
   "include": [
     "vite.config.*",
-    "./auto-import-utils.ts"
+    "./auto-import-utils.ts",
+    "./.unimport-items.json",
+    ".eslintrc-auto-import.json"
   ]
 }

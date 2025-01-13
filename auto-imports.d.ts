@@ -7,13 +7,18 @@
 export {}
 declare global {
   const Alert: typeof import('@/components/Alert.tsx')['Alert']
+  const Bar: typeof import('./src/hooks/useInput')['Bar']
   const Button: typeof import('@/components/Button.tsx')['Button']
+  const Foo: typeof import('./src/hooks/useInput')['Foo']
   const Header: typeof import('@/components/Header.jsx')['Header']
   const Input: typeof import('@/components/Input.tsx')['Input']
+  const Test: typeof import('@/components/Test.tsx')['Test']
   const UiInput: typeof import('@/components/ui/Input.tsx')['Input']
   const UiTest: typeof import('@/components/ui/Test.tsx')['Test']
   const createRef: typeof import('react')['createRef']
   const forwardRef: typeof import('react')['forwardRef']
+  const isDesktop: typeof import('./src/hooks/useInput')['isDesktop']
+  const isMobile: typeof import('./src/hooks/useInput')['isMobile']
   const lazy: typeof import('react')['lazy']
   const memo: typeof import('react')['memo']
   const startTransition: typeof import('react')['startTransition']

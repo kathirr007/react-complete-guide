@@ -1,0 +1,168 @@
+[
+  {
+    "from": "@/components/Header.jsx",
+    "name": "Header",
+    "as": "Header"
+  },
+  {
+    "from": "@/components/ui/Input.tsx",
+    "name": "Input",
+    "as": "UiInput"
+  },
+  {
+    "from": "react",
+    "name": "useState",
+    "as": "useState"
+  },
+  {
+    "from": "react",
+    "name": "useCallback",
+    "as": "useCallback"
+  },
+  {
+    "from": "react",
+    "name": "useMemo",
+    "as": "useMemo"
+  },
+  {
+    "from": "react",
+    "name": "useEffect",
+    "as": "useEffect"
+  },
+  {
+    "from": "react",
+    "name": "useRef",
+    "as": "useRef"
+  },
+  {
+    "from": "react",
+    "name": "useContext",
+    "as": "useContext"
+  },
+  {
+    "from": "react",
+    "name": "useReducer",
+    "as": "useReducer"
+  },
+  {
+    "from": "react",
+    "name": "useImperativeHandle",
+    "as": "useImperativeHandle"
+  },
+  {
+    "from": "react",
+    "name": "useDebugValue",
+    "as": "useDebugValue"
+  },
+  {
+    "from": "react",
+    "name": "useDeferredValue",
+    "as": "useDeferredValue"
+  },
+  {
+    "from": "react",
+    "name": "useLayoutEffect",
+    "as": "useLayoutEffect"
+  },
+  {
+    "from": "react",
+    "name": "useTransition",
+    "as": "useTransition"
+  },
+  {
+    "from": "react",
+    "name": "startTransition",
+    "as": "startTransition"
+  },
+  {
+    "from": "react",
+    "name": "useSyncExternalStore",
+    "as": "useSyncExternalStore"
+  },
+  {
+    "from": "react",
+    "name": "useInsertionEffect",
+    "as": "useInsertionEffect"
+  },
+  {
+    "from": "react",
+    "name": "useId",
+    "as": "useId"
+  },
+  {
+    "from": "react",
+    "name": "lazy",
+    "as": "lazy"
+  },
+  {
+    "from": "react",
+    "name": "memo",
+    "as": "memo"
+  },
+  {
+    "from": "react",
+    "name": "createRef",
+    "as": "createRef"
+  },
+  {
+    "from": "react",
+    "name": "forwardRef",
+    "as": "forwardRef"
+  },
+  {
+    "from": "react-router",
+    "name": "useOutletContext",
+    "as": "useOutletContext"
+  },
+  {
+    "from": "react-router",
+    "name": "useHref",
+    "as": "useHref"
+  },
+  {
+    "from": "react-router",
+    "name": "useInRouterContext",
+    "as": "useInRouterContext"
+  },
+  {
+    "from": "react-router",
+    "name": "useLocation",
+    "as": "useLocation"
+  },
+  {
+    "from": "react-router",
+    "name": "useNavigationType",
+    "as": "useNavigationType"
+  },
+  {
+    "from": "react-router",
+    "name": "useNavigate",
+    "as": "useNavigate"
+  },
+  {
+    "from": "react-router",
+    "name": "useOutlet",
+    "as": "useOutlet"
+  },
+  {
+    "from": "react-router",
+    "name": "useParams",
+    "as": "useParams"
+  },
+  {
+    "from": "react-router",
+    "name": "useResolvedPath",
+    "as": "useResolvedPath"
+  },
+  {
+    "from": "react-router",
+    "name": "useRoutes",
+    "as": "useRoutes"
+  },
+  {
+    "name": "useInput",
+    "as": "useInput",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useInput.ts",
+    "__source": "dir"
+  }
+]
