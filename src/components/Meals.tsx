@@ -21,10 +21,7 @@ export function Meals() {
   return (
     <ul id="meals">
       {loadedMeals?.map((meal: Meal) => (
-        <li key={meal.name}>
-          {' '}
-          {meal.name}
-        </li>
+        <MealItem key={meal.id} meal={meal} />
       ))}
     </ul>
   );

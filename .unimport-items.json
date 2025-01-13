@@ -1,13 +1,48 @@
 [
   {
+    "from": "@/components/Cart.tsx",
+    "name": "Cart",
+    "as": "Cart"
+  },
+  {
+    "from": "@/components/CartItem.tsx",
+    "name": "CartItem",
+    "as": "CartItem"
+  },
+  {
+    "from": "@/components/Checkout.tsx",
+    "name": "Checkout",
+    "as": "Checkout"
+  },
+  {
     "from": "@/components/Header.jsx",
     "name": "Header",
     "as": "Header"
   },
   {
+    "from": "@/components/MealItem.tsx",
+    "name": "MealItem",
+    "as": "MealItem"
+  },
+  {
     "from": "@/components/Meals.tsx",
     "name": "Meals",
     "as": "Meals"
+  },
+  {
+    "from": "@/components/ui/Button.tsx",
+    "name": "Button",
+    "as": "UiButton"
+  },
+  {
+    "from": "@/components/ui/Input.tsx",
+    "name": "Input",
+    "as": "UiInput"
+  },
+  {
+    "from": "@/components/ui/Modal.tsx",
+    "name": "Modal",
+    "as": "UiModal"
   },
   {
     "from": "react",
@@ -163,6 +198,36 @@
     "name": "useInput",
     "as": "useInput",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useInput.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "currencyFormatter",
+    "as": "currencyFormatter",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/helpers.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "CartContext",
+    "as": "CartContext",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/CartContext.jsx",
+    "__source": "dir"
+  },
+  {
+    "name": "CartContextProvider",
+    "as": "CartContextProvider",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/CartContext.jsx",
+    "__source": "dir"
+  },
+  {
+    "name": "UserProgressContextProvider",
+    "as": "UserProgressContextProvider",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/UserProgressContext.tsx",
+    "__source": "dir"
+  },
+  {
+    "name": "UserProgressContext",
+    "as": "UserProgressContext",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/UserProgressContext.tsx",
     "__source": "dir"
   }
 ]

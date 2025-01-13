@@ -37,6 +37,18 @@
     "useState": true,
     "useSyncExternalStore": true,
     "useTransition": true,
-    "Meals": true
+    "Meals": true,
+    "MealItem": true,
+    "currencyFormatter": true,
+    "UiButton": true,
+    "CartContext": true,
+    "CartContextProvider": true,
+    "UiModal": true,
+    "Cart": true,
+    "UserProgressContex": true,
+    "UserProgressContext": true,
+    "UserProgressContextProvider": true,
+    "CartItem": true,
+    "Checkout": true
   }
 }
