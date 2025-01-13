@@ -5,9 +5,9 @@
     "as": "Header"
   },
   {
-    "from": "@/components/ui/Input.tsx",
-    "name": "Input",
-    "as": "UiInput"
+    "from": "@/components/Meals.tsx",
+    "name": "Meals",
+    "as": "Meals"
   },
   {
     "from": "react",

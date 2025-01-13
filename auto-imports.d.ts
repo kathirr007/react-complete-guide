@@ -12,6 +12,7 @@ declare global {
   const Foo: typeof import('./src/hooks/useInput')['Foo']
   const Header: typeof import('@/components/Header.jsx')['Header']
   const Input: typeof import('@/components/Input.tsx')['Input']
+  const Meals: typeof import('@/components/Meals.tsx')['Meals']
   const Test: typeof import('@/components/Test.tsx')['Test']
   const UiInput: typeof import('@/components/ui/Input.tsx')['Input']
   const UiTest: typeof import('@/components/ui/Test.tsx')['Test']

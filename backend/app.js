@@ -66,4 +66,6 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Not found' });
 });
 
-app.listen(3010);
+app.listen(3010, () => {
+  console.log('App is listening on http://localhost:3010');
+});
