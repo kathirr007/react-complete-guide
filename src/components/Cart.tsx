@@ -25,7 +25,7 @@ export function Cart() {
   }
 
   return (
-    <UiModal open={userProgressCtx.progress === 'cart'} onClose={userProgressCtx.progress === 'cart' ? handleCloseCart : null}>
+    <UiModal className="cart" open={userProgressCtx.progress === 'cart'} onClose={userProgressCtx.progress === 'cart' ? handleCloseCart : null}>
       <h2>Your Cart</h2>
       <ul>
         {cartCtx.items.map((item: Meal) => (
