@@ -1,5 +1,5 @@
 import type { Meal } from '@/types';
-import type { FormEvent } from 'react';
+import { type FormEvent, useActionState } from 'react';
 
 const requestConfig: RequestInit = {
   method: 'POST',
@@ -12,7 +12,7 @@ export function Checkout() {
   const cartCtx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
 
-  const { data, error, isLoading: isSending, sendRequest, clearData } = useHttp('http://localhost:3010/orders', requestConfig);
+  const { data, error, sendRequest, clearData } = useHttp('http://localhost:3010/orders', requestConfig);
 
   const cartTotal = cartCtx.items.reduce((cartTotalPrice: number, item: Meal) => {
     return cartTotalPrice + (+item.price * (item.quantity ?? 0));
@@ -27,7 +27,7 @@ export function Checkout() {
     cartCtx.clearCart();
     clearData();
   }
-  function handleSubmit(event: FormEvent) {
+  /* function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
     const fd = new FormData(event.target as HTMLFormElement);
@@ -40,7 +40,19 @@ export function Checkout() {
         customer: { ...customerData }
       }
     }));
+  } */
+  async function handleCheckoutAction(prevState: any, formData: any) {
+    const customerData = { ...Object.fromEntries(formData.entries()) };
+
+    await sendRequest(JSON.stringify({
+      order: {
+        items: cartCtx.items,
+        customer: { ...customerData }
+      }
+    }));
   }
+
+  const [formState, formAction, isSending] = useActionState(handleCheckoutAction, null);
 
   if (data && !error) {
     return (
@@ -61,7 +73,7 @@ export function Checkout() {
 
   return (
     <UiModal open={userProgressCtx.progress === 'checkout'} onClose={userProgressCtx.progress === 'checkout' ? handleClose : null}>
-      <form onSubmit={handleSubmit}>
+      <form action={formAction}>
         <h2>Checkout</h2>
         <p>
           Total Amount:
