@@ -67,7 +67,8 @@ function CartContextProvider({ children }) {
       {
         data: {
           ...item
-        }
+        },
+        autoClose: 1000
       }
     );
   };
