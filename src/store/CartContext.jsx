@@ -4,7 +4,8 @@ import { toast, ToastContainer } from 'react-toastify';
 const CartContext = createContext({
   items: [],
   addItem: (item, showToast) => {},
-  removeItem: (id) => {}
+  removeItem: (id) => {},
+  clearCart: (id) => {}
 });
 
 function cartReducer(state, action) {
@@ -39,6 +40,10 @@ function cartReducer(state, action) {
     }
 
     return { ...state, items: updatedItems };
+  }
+
+  if (action.type === 'CLEAR_CART') {
+    return { ...state, items: [] };
   }
 
   return state;
@@ -76,10 +81,15 @@ function CartContextProvider({ children }) {
     dispatchCartAction({ type: 'REMOVE_ITEM', id });
   }
 
+  function clearCart() {
+    dispatchCartAction({ type: 'CLEAR_CART' });
+  }
+
   const cartContext = {
     items: cart.items,
     addItem,
-    removeItem
+    removeItem,
+    clearCart
   };
 
   return (

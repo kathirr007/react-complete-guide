@@ -1,7 +1,9 @@
 import type { Meal } from '@/types';
 
+const requestConfig = {};
+
 export function Meals() {
-  const [loadedMeals, setLoadedMeals] = useState<Meal[]>();
+  /* const [loadedMeals, setLoadedMeals] = useState<Meal[]>();
 
   useEffect(() => {
     async function fetchMeals() {
@@ -16,7 +18,17 @@ export function Meals() {
     }
 
     fetchMeals();
-  }, []);
+  }, []); */
+
+  const { data: loadedMeals, error, isLoading } = useHttp('http://localhost:3010/meals', requestConfig, []);
+
+  if (isLoading) {
+    return <p className="meal-item p-4">Fetching meals list..., please wait.</p>;
+  }
+
+  if (error) {
+    return <ErrorBlock title="Failed to fetch meals" message={error} />;
+  }
 
   return (
     <ul id="meals">

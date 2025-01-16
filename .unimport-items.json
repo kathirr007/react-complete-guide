@@ -15,6 +15,11 @@
     "as": "Checkout"
   },
   {
+    "from": "@/components/ErrorBlock.tsx",
+    "name": "ErrorBlock",
+    "as": "ErrorBlock"
+  },
+  {
     "from": "@/components/Header.jsx",
     "name": "Header",
     "as": "Header"
@@ -193,6 +198,12 @@
     "from": "react-router",
     "name": "useRoutes",
     "as": "useRoutes"
+  },
+  {
+    "name": "useHttp",
+    "as": "useHttp",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
+    "__source": "dir"
   },
   {
     "name": "useInput",

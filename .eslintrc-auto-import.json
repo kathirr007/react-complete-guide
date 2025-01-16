@@ -49,6 +49,9 @@
     "UserProgressContext": true,
     "UserProgressContextProvider": true,
     "CartItem": true,
-    "Checkout": true
+    "Checkout": true,
+    "useHttp": true,
+    "Error": true,
+    "ErrorBlock": true
   }
 }
