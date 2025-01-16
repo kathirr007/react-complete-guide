@@ -34,8 +34,6 @@ export function Checkout() {
 
     const customerData = { ...Object.fromEntries(fd.entries()) };
 
-    console.log('customerData', customerData);
-
     sendRequest(JSON.stringify({
       order: {
         items: cartCtx.items,
