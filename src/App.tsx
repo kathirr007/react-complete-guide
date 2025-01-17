@@ -1,15 +1,8 @@
-import { CartContextProvider } from './store/CartContext';
+import Counter from './components/Counter';
 
 function App() {
   return (
-    <UserProgressContextProvider>
-      <CartContextProvider>
-        <Header />
-        <Meals />
-        <Cart />
-        <Checkout />
-      </CartContextProvider>
-    </UserProgressContextProvider>
+    <Counter />
   );
 }
 

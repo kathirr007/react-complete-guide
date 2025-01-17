@@ -1,13 +1,7 @@
 {
   "globals": {
-    "Bar": true,
-    "Foo": true,
-    "Header": true,
-    "UiInput": true,
     "createRef": true,
     "forwardRef": true,
-    "isDesktop": true,
-    "isMobile": true,
     "lazy": true,
     "memo": true,
     "startTransition": true,
@@ -20,7 +14,6 @@
     "useId": true,
     "useImperativeHandle": true,
     "useInRouterContext": true,
-    "useInput": true,
     "useInsertionEffect": true,
     "useLayoutEffect": true,
     "useLocation": true,
@@ -36,22 +29,6 @@
     "useRoutes": true,
     "useState": true,
     "useSyncExternalStore": true,
-    "useTransition": true,
-    "Meals": true,
-    "MealItem": true,
-    "currencyFormatter": true,
-    "UiButton": true,
-    "CartContext": true,
-    "CartContextProvider": true,
-    "UiModal": true,
-    "Cart": true,
-    "UserProgressContex": true,
-    "UserProgressContext": true,
-    "UserProgressContextProvider": true,
-    "CartItem": true,
-    "Checkout": true,
-    "useHttp": true,
-    "Error": true,
-    "ErrorBlock": true
+    "useTransition": true
   }
 }
