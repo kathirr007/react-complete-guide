@@ -38,6 +38,11 @@
     "store": true,
     "Counter copy": true,
     "CounterClass": true,
-    "counterActions": true
+    "counterActions": true,
+    "authActions": true,
+    "authActions: authSlice.actions": true,
+    "authReducer: authSlice.reducer": true,
+    "counterReducer": true,
+    "authReducer": true
   }
 }

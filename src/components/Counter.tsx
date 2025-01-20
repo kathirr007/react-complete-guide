@@ -1,6 +1,3 @@
-import type { CounterState } from '@/store';
-
-import { counterActions } from '@/store';
 import { useDispatch, useSelector } from 'react-redux';
 import classes from './Counter.module.css';
 
@@ -23,8 +20,8 @@ function Counter() {
     dispatch(counterActions.dec());
   };
 
-  const counter = useSelector((state: CounterState) => state.counter);
-  const showCounter = useSelector((state: CounterState) => state.showCounter);
+  const counter = useSelector((state: ReturnType<typeof store.getState>) => state.counterStore.counter);
+  const showCounter = useSelector((state: ReturnType<typeof store.getState>) => state.counterStore.showCounter);
 
   return (
     <main className={classes.counter}>

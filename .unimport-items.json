@@ -175,9 +175,27 @@
     "as": "useRoutes"
   },
   {
+    "name": "authActions",
+    "as": "authActions",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/auth.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "authReducer",
+    "as": "authReducer",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/auth.ts",
+    "__source": "dir"
+  },
+  {
     "name": "counterActions",
     "as": "counterActions",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/index.ts",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/counter.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "counterReducer",
+    "as": "counterReducer",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/counter.ts",
     "__source": "dir"
   },
   {
