@@ -1,9 +1,9 @@
 import type { CounterState } from '@/store';
 
+import type { UnknownAction } from '@reduxjs/toolkit';
 import type { Dispatch } from 'react';
-import type { UnknownAction } from 'redux';
 import { Component } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 import classes from './Counter.module.css';
 
 const CounterClass = class extends Component {
@@ -40,8 +40,8 @@ function mapStateToProps(state: CounterState) {
 
 function mapDispatchToProps(dispatch: Dispatch<UnknownAction>) {
   return {
-    increment: () => dispatch({ type: 'increment' }),
-    decrement: () => dispatch({ type: 'decrement' })
+    increment: () => dispatch(counterActions.inc()),
+    decrement: () => dispatch(counterActions.dec())
   };
 }
 

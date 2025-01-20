@@ -20,4 +20,4 @@ function Auth() {
   );
 }
 
-export default Auth;
+export { Auth };

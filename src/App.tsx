@@ -2,7 +2,11 @@
 
 function App() {
   return (
-    <Counter />
+    <>
+      <Header />
+      <Auth />
+      <Counter />
+    </>
   );
 }
 
