@@ -37,6 +37,7 @@
     "CounterState": true,
     "store": true,
     "Counter copy": true,
-    "CounterClass": true
+    "CounterClass": true,
+    "counterActions": true
   }
 }

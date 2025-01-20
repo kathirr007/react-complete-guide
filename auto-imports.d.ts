@@ -11,6 +11,7 @@ declare global {
   const CounterClass: typeof import('@/components/CounterClass.tsx')['CounterClass']
   const Header: typeof import('@/components/Header.tsx')['Header']
   const UserProfile: typeof import('@/components/UserProfile.tsx')['UserProfile']
+  const counterActions: typeof import('./src/store/index')['counterActions']
   const createRef: typeof import('react')['createRef']
   const forwardRef: typeof import('react')['forwardRef']
   const lazy: typeof import('react')['lazy']

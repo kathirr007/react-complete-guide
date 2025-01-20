@@ -175,6 +175,12 @@
     "as": "useRoutes"
   },
   {
+    "name": "counterActions",
+    "as": "counterActions",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/index.ts",
+    "__source": "dir"
+  },
+  {
     "name": "store",
     "as": "store",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/index.ts",

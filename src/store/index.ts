@@ -1,5 +1,4 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
-import { createStore } from 'redux';
 
 export interface CounterState {
   counter: number;
@@ -64,4 +63,6 @@ const store = configureStore({
   reducer: counterSlice.reducer
 });
 
-export { store };
+const counterActions = counterSlice.actions;
+
+export { counterActions, store };
