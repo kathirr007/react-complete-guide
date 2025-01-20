@@ -10,18 +10,18 @@ const CounterClass = class extends Component {
   toggleCounterHandler() {};
 
   incHandler() {
-    this.props.increment();
+    (this.props as any).increment();
   };
 
   decHandler() {
-    this.props.decrement();
+    (this.props as any).decrement();
   };
 
   render() {
     return (
       <main className={classes.counter}>
         <h1>Redux Counter</h1>
-        <div className={classes.value}>{this.props.counter}</div>
+        <div className={classes.value}>{(this.props as CounterState).counter}</div>
         <div>
           <button onClick={this.decHandler.bind(this)} type="button">Decrement</button>
           <button onClick={this.incHandler.bind(this)} type="button">Increment</button>
