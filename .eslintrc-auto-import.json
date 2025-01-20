@@ -63,6 +63,7 @@
     "uiReducer": true,
     "CartItemType": true,
     "UIToast": true,
-    "displayMsg": true
+    "displayMsg": true,
+    "UICartToast": true
   }
 }

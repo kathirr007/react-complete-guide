@@ -14,6 +14,7 @@ declare global {
   const ShopProductItem: typeof import('@/components/Shop/ProductItem.tsx')['ProductItem']
   const ShopProducts: typeof import('@/components/Shop/Products.tsx')['Products']
   const UICard: typeof import('@/components/UI/Card.tsx')['Card']
+  const UICartToast: typeof import('@/components/UI/CartToast.tsx')['CartToast']
   const UIToast: typeof import('@/components/UI/Toast.tsx')['Toast']
   const cartActions: typeof import('./src/store/cart')['cartActions']
   const cartReducer: typeof import('./src/store/cart')['cartReducer']

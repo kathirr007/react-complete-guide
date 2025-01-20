@@ -9,7 +9,7 @@ type Props = Partial<ToastContentProps> & {
   data: ToastDataType;
 };
 
-function Toast({ data }: Readonly<{ data?: ToastDataType }>) {
+function CartToast({ data }: Readonly<{ data?: ToastDataType }>) {
   return (
     <div className="pr-6">
       <strong>{data?.title}</strong>
@@ -23,4 +23,4 @@ function Toast({ data }: Readonly<{ data?: ToastDataType }>) {
   );
 }
 
-export { Toast };
+export { CartToast };
