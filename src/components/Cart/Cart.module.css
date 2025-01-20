@@ -1,7 +1,8 @@
-.cart {
+.cart,
+.card.cart {
   max-width: 30rem;
   color: white;
-  background-color: #313131;
+  background-color: #313131 !important;
 }
 
 .cart h2 {

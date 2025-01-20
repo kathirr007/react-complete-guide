@@ -14,11 +14,18 @@ declare global {
   const ShopProductItem: typeof import('@/components/Shop/ProductItem.tsx')['ProductItem']
   const ShopProducts: typeof import('@/components/Shop/Products.tsx')['Products']
   const UICard: typeof import('@/components/UI/Card.tsx')['Card']
+  const UIToast: typeof import('@/components/UI/Toast.tsx')['Toast']
+  const cartActions: typeof import('./src/store/cart')['cartActions']
+  const cartReducer: typeof import('./src/store/cart')['cartReducer']
   const createRef: typeof import('react')['createRef']
+  const displayMsg: typeof import('./src/utils/index')['displayMsg']
   const forwardRef: typeof import('react')['forwardRef']
   const lazy: typeof import('react')['lazy']
   const memo: typeof import('react')['memo']
   const startTransition: typeof import('react')['startTransition']
+  const store: typeof import('./src/store/index')['store']
+  const uiActions: typeof import('./src/store/ui')['uiActions']
+  const uiReducer: typeof import('./src/store/ui')['uiReducer']
   const useCallback: typeof import('react')['useCallback']
   const useContext: typeof import('react')['useContext']
   const useDebugValue: typeof import('react')['useDebugValue']
@@ -44,4 +51,10 @@ declare global {
   const useState: typeof import('react')['useState']
   const useSyncExternalStore: typeof import('react')['useSyncExternalStore']
   const useTransition: typeof import('react')['useTransition']
+}
+// for type re-export
+declare global {
+  // @ts-ignore
+  export type { CartItemType } from './src/store/cart'
+  import('./src/store/cart')
 }

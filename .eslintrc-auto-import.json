@@ -56,6 +56,13 @@
     "Cart": true,
     "CartButton": true,
     "CartItem": true,
-    "Layout": true
+    "Layout": true,
+    "cartActions": true,
+    "cartReducer": true,
+    "uiActions": true,
+    "uiReducer": true,
+    "CartItemType": true,
+    "UIToast": true,
+    "displayMsg": true
   }
 }

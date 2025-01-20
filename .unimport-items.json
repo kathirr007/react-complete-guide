@@ -40,6 +40,11 @@
     "as": "UICard"
   },
   {
+    "from": "@/components/UI/Toast.tsx",
+    "name": "Toast",
+    "as": "UIToast"
+  },
+  {
     "from": "react",
     "name": "useState",
     "as": "useState"
@@ -188,5 +193,48 @@
     "from": "react-router",
     "name": "useRoutes",
     "as": "useRoutes"
+  },
+  {
+    "name": "displayMsg",
+    "as": "displayMsg",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/index.tsx",
+    "__source": "dir"
+  },
+  {
+    "name": "cartActions",
+    "as": "cartActions",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/cart.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "cartReducer",
+    "as": "cartReducer",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/cart.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "CartItemType",
+    "as": "CartItemType",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/cart.ts",
+    "type": true,
+    "__source": "dir"
+  },
+  {
+    "name": "store",
+    "as": "store",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/index.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "uiActions",
+    "as": "uiActions",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/ui.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "uiReducer",
+    "as": "uiReducer",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/ui.ts",
+    "__source": "dir"
   }
 ]
