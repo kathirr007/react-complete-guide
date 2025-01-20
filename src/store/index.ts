@@ -1,3 +1,4 @@
+import { configureStore, createSlice } from '@reduxjs/toolkit';
 import { createStore } from 'redux';
 
 export interface CounterState {
@@ -6,6 +7,28 @@ export interface CounterState {
 }
 
 const initialState = { counter: 0, showCounter: true };
+
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState,
+  reducers: {
+    inc(state) {
+      state.counter++;
+    },
+    dec(state) {
+      state.counter--;
+    },
+    increase(state, action: {
+      payload: number;
+      type: string;
+    }) {
+      state.counter = state.counter + action.payload;
+    },
+    toggleCounter(state) {
+      state.showCounter = !state.showCounter;
+    }
+  }
+});
 
 function counterReducer(state: CounterState = initialState, action: { type: string; [key: string]: any }): CounterState {
   if (action.type === 'increment') {
@@ -36,6 +59,9 @@ function counterReducer(state: CounterState = initialState, action: { type: stri
   return state;
 }
 
-const store = createStore(counterReducer);
+// const store = createStore(counterReducer);
+const store = configureStore({
+  reducer: counterSlice.reducer
+});
 
 export { store };
