@@ -1,28 +1,43 @@
 [
   {
-    "from": "@/components/Auth.tsx",
-    "name": "Auth",
-    "as": "Auth"
+    "from": "@/components/Cart/Button.tsx",
+    "name": "Button",
+    "as": "CartButton"
   },
   {
-    "from": "@/components/Counter.tsx",
-    "name": "Counter",
-    "as": "Counter"
+    "from": "@/components/Cart/index.tsx",
+    "name": "Cart",
+    "as": "Cart"
   },
   {
-    "from": "@/components/CounterClass.tsx",
-    "name": "CounterClass",
-    "as": "CounterClass"
+    "from": "@/components/Cart/Item.tsx",
+    "name": "Item",
+    "as": "CartItem"
   },
   {
-    "from": "@/components/Header.tsx",
-    "name": "Header",
-    "as": "Header"
+    "from": "@/components/Layout/index.tsx",
+    "name": "Layout",
+    "as": "Layout"
   },
   {
-    "from": "@/components/UserProfile.tsx",
-    "name": "UserProfile",
-    "as": "UserProfile"
+    "from": "@/components/Layout/MainHeader.tsx",
+    "name": "MainHeader",
+    "as": "LayoutMainHeader"
+  },
+  {
+    "from": "@/components/Shop/ProductItem.tsx",
+    "name": "ProductItem",
+    "as": "ShopProductItem"
+  },
+  {
+    "from": "@/components/Shop/Products.tsx",
+    "name": "Products",
+    "as": "ShopProducts"
+  },
+  {
+    "from": "@/components/UI/Card.tsx",
+    "name": "Card",
+    "as": "UICard"
   },
   {
     "from": "react",
@@ -173,42 +188,5 @@
     "from": "react-router",
     "name": "useRoutes",
     "as": "useRoutes"
-  },
-  {
-    "name": "authActions",
-    "as": "authActions",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/auth.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "authReducer",
-    "as": "authReducer",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/auth.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "counterActions",
-    "as": "counterActions",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/counter.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "counterReducer",
-    "as": "counterReducer",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/counter.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "store",
-    "as": "store",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/index.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "CounterState",
-    "as": "CounterState",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/index.ts",
-    "type": true,
-    "__source": "dir"
   }
 ]

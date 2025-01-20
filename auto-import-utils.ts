@@ -7,7 +7,8 @@ export function pascalCaseWithCapitals(str: string) {
   return str
     .split('/')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('');
+    .join('')
+    .replace(new RegExp('index' as string, 'gi'), '');
 }
 
 export function removeExtension(str: string) {
@@ -49,7 +50,7 @@ export function getComponentImports() {
 
     return {
       [fromPath]: [
-        [removeExtension(entry.name), removeExtension(componentName)]
+        [/index/i.test(removeExtension(entry.name)) ? removeExtension(componentName) : removeExtension(entry.name), removeExtension(componentName)]
       ]
     };
   }) as ImportsMap[];

@@ -43,6 +43,19 @@
     "authActions: authSlice.actions": true,
     "authReducer: authSlice.reducer": true,
     "counterReducer": true,
-    "authReducer": true
+    "authReducer": true,
+    "CartCart": true,
+    "CartCartButton": true,
+    "CartCartItem": true,
+    "LayoutLayout": true,
+    "LayoutMainHeader": true,
+    "ShopProductItem": true,
+    "ShopProducts": true,
+    "UICard": true,
+    "CartIndex": true,
+    "Cart": true,
+    "CartButton": true,
+    "CartItem": true,
+    "Layout": true
   }
 }
