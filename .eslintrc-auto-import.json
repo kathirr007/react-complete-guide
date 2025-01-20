@@ -29,6 +29,14 @@
     "useRoutes": true,
     "useState": true,
     "useSyncExternalStore": true,
-    "useTransition": true
+    "useTransition": true,
+    "Auth": true,
+    "Counter": true,
+    "Header": true,
+    "UserProfile": true,
+    "CounterState": true,
+    "store": true,
+    "Counter copy": true,
+    "CounterClass": true
   }
 }

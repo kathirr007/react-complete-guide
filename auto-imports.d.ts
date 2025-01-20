@@ -6,11 +6,17 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const Auth: typeof import('@/components/Auth.tsx')['Auth']
+  const Counter: typeof import('@/components/Counter.tsx')['Counter']
+  const CounterClass: typeof import('@/components/CounterClass.tsx')['CounterClass']
+  const Header: typeof import('@/components/Header.tsx')['Header']
+  const UserProfile: typeof import('@/components/UserProfile.tsx')['UserProfile']
   const createRef: typeof import('react')['createRef']
   const forwardRef: typeof import('react')['forwardRef']
   const lazy: typeof import('react')['lazy']
   const memo: typeof import('react')['memo']
   const startTransition: typeof import('react')['startTransition']
+  const store: typeof import('./src/store/index')['store']
   const useCallback: typeof import('react')['useCallback']
   const useContext: typeof import('react')['useContext']
   const useDebugValue: typeof import('react')['useDebugValue']
@@ -36,4 +42,10 @@ declare global {
   const useState: typeof import('react')['useState']
   const useSyncExternalStore: typeof import('react')['useSyncExternalStore']
   const useTransition: typeof import('react')['useTransition']
+}
+// for type re-export
+declare global {
+  // @ts-ignore
+  export type { CounterState } from './src/store/index'
+  import('./src/store/index')
 }

@@ -1,8 +1,8 @@
-import Counter from './components/Counter';
+import { storeConnect as CounterClass } from './components/CounterClass';
 
 function App() {
   return (
-    <Counter />
+    <CounterClass />
   );
 }
 

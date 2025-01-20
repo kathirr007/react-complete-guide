@@ -1,5 +1,30 @@
 [
   {
+    "from": "@/components/Auth.tsx",
+    "name": "Auth",
+    "as": "Auth"
+  },
+  {
+    "from": "@/components/Counter.tsx",
+    "name": "Counter",
+    "as": "Counter"
+  },
+  {
+    "from": "@/components/CounterClass.tsx",
+    "name": "CounterClass",
+    "as": "CounterClass"
+  },
+  {
+    "from": "@/components/Header.tsx",
+    "name": "Header",
+    "as": "Header"
+  },
+  {
+    "from": "@/components/UserProfile.tsx",
+    "name": "UserProfile",
+    "as": "UserProfile"
+  },
+  {
     "from": "react",
     "name": "useState",
     "as": "useState"
@@ -148,5 +173,18 @@
     "from": "react-router",
     "name": "useRoutes",
     "as": "useRoutes"
+  },
+  {
+    "name": "store",
+    "as": "store",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/index.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "CounterState",
+    "as": "CounterState",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/index.ts",
+    "type": true,
+    "__source": "dir"
   }
 ]
