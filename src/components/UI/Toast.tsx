@@ -1,18 +1,24 @@
 import type { CartItemType } from '@/store/cart';
 import type { ToastContentProps } from 'react-toastify';
 
+interface ToastDataType extends CartItemType {
+  actionType: 'inc' | 'dec';
+}
+
 type Props = Partial<ToastContentProps> & {
-  data: CartItemType;
+  data: ToastDataType;
 };
 
-function Toast({ data, actionType }: Readonly<{ data?: CartItemType; actionType?: 'inc' | 'dec' }>) {
+function Toast({ data }: Readonly<{ data?: ToastDataType }>) {
   return (
     <div className="pr-6">
       <strong>{data?.title}</strong>
       {' '}
-      {actionType === 'inc' ? 'added' : 'removed'}
+      {data?.actionType === 'inc' ? 'added' : 'removed'}
       {' '}
-      to the cart successfully.
+      {data?.actionType === 'inc' ? 'to' : 'from'}
+      {' '}
+      the cart successfully.
     </div>
   );
 }
