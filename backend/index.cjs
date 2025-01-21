@@ -17,7 +17,7 @@ const isDevBuild = process.env.NODE_ENV === 'development';
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__currentDirname, './public')));
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
