@@ -1,0 +1,31 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [ "20b_redux_advanced" ] # Replace with the branch you want to deploy from
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20' # Specify the desired Node.js version
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy to Vercel
+      uses: vercel/vercel-action@v3
+      with:
+        # Your Vercel Token (can be stored as a repository secret)
+        token: ${{ secrets.VERCEL_TOKEN }}
+        # Project ID (obtain from Vercel dashboard) 
+        project-id: ${{ secrets.VERCEL_PROJECT_ID }}
