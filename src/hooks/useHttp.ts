@@ -44,4 +44,4 @@ export function useHttp(url: string, config?: RequestInit, initialData?: any) {
 
 export const isDevBuild = process.env.NODE_ENV === 'development';
 export const isProBuild = process.env.NODE_ENV === 'production';
-export const baseUrl = isDevBuild ? 'http://localhost:3010' : 'https://react-food-app-backend-le0am8bqq-kathiravan-ks-projects.vercel.app';
+export const baseUrl = isDevBuild ? 'http://localhost:3010' : 'https://react-food-app-backend.vercel.app';

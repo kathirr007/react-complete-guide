@@ -7,12 +7,14 @@ const path = require('node:path');
 
 const __currentDirname = path.resolve();
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const express = require('express');
 
 const app = express();
 
-const PORT = 3010;
+const PORT = process.env.PORT || 3010;
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
