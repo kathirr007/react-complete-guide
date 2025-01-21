@@ -52,6 +52,25 @@
     "Checkout": true,
     "useHttp": true,
     "Error": true,
-    "ErrorBlock": true
+    "ErrorBlock": true,
+    "CartButton": true,
+    "CartItemType": true,
+    "Layout": true,
+    "LayoutMainHeader": true,
+    "RootState": true,
+    "ShopProductItem": true,
+    "ShopProducts": true,
+    "UICard": true,
+    "UICartToast": true,
+    "UINotification": true,
+    "cartActions": true,
+    "cartInitialState": true,
+    "cartReducer": true,
+    "displayMsg": true,
+    "fetchCartData": true,
+    "sendCartData": true,
+    "store": true,
+    "uiActions": true,
+    "uiReducer": true
   }
 }

@@ -1,9 +1,15 @@
-import fs from 'node:fs/promises';
+/* import fs from 'node:fs/promises';
 
 import bodyParser from 'body-parser';
-import express from 'express';
+import express from 'express'; */
+const fs = require('node:fs/promises');
+
+const bodyParser = require('body-parser');
+const express = require('express');
 
 const app = express();
+
+const PORT = 3010;
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
@@ -16,7 +22,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/meals', async (req, res) => {
-  const meals = await fs.readFile('./data/available-meals.json', 'utf8');
+  const meals = await fs.readFile('./available-meals.json', 'utf8');
   res.json(JSON.parse(meals));
 });
 
@@ -51,10 +57,10 @@ app.post('/orders', async (req, res) => {
     ...orderData,
     id: (Math.random() * 1000).toString()
   };
-  const orders = await fs.readFile('./data/orders.json', 'utf8');
+  const orders = await fs.readFile('./orders.json', 'utf8');
   const allOrders = JSON.parse(orders);
   allOrders.push(newOrder);
-  await fs.writeFile('./data/orders.json', JSON.stringify(allOrders));
+  await fs.writeFile('./orders.json', JSON.stringify(allOrders));
   res.status(201).json({ message: 'Order created!' });
 });
 
@@ -66,6 +72,8 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Not found' });
 });
 
-app.listen(3010, () => {
-  console.log('App is listening on http://localhost:3010');
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
+
+module.exports = app;
