@@ -14,9 +14,9 @@ jobs:
       - name: Switch to backend folder
         run: cd backend && ls
       - name: Install Vercel CLI
-        run: npm install --global vercel@canary pnpm
+        run: cd backend && npm install --global vercel@canary pnpm
       - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --cwd backend --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
       # - name: Build Project Artifacts
       #   run: vercel dev --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
