@@ -65,6 +65,9 @@
     "UIToast": true,
     "displayMsg": true,
     "UICartToast": true,
-    "UINotification": true
+    "UINotification": true,
+    "sendCartData": true,
+    "cartInitialState": true,
+    "fetchCartData": true
   }
 }

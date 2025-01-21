@@ -1,3 +1,4 @@
+import type { Dispatch, UnknownAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 
 export interface CartItemType {
@@ -9,9 +10,10 @@ export interface CartItemType {
   quantity?: number;
 }
 
-const cartInitialState: { items: CartItemType[]; totalQuantity: number } = {
+export const cartInitialState: { items: CartItemType[]; totalQuantity: number; isChanged?: boolean } = {
   items: [],
-  totalQuantity: 0
+  totalQuantity: 0,
+  isChanged: false
 };
 
 const cartSlice = createSlice({
@@ -22,6 +24,7 @@ const cartSlice = createSlice({
       const newItem = action.payload;
       const existingItem = state.items.find((item: CartItemType) => item.id === newItem.id);
       state.totalQuantity++;
+      state.isChanged = true;
 
       if (!existingItem) {
         const updatedItem = {
@@ -39,6 +42,7 @@ const cartSlice = createSlice({
       const id = action.payload;
       const existingItem = state.items.find((item: CartItemType) => item.id === id);
       state.totalQuantity--;
+      state.isChanged = true;
       if (existingItem) {
         if (existingItem.quantity === 1) {
           state.items = state.items.filter(item => item.id !== id);
@@ -49,13 +53,55 @@ const cartSlice = createSlice({
         }
         displayMsg(existingItem, 'dec');
       }
+    },
+    replaceCart(state, action) {
+      state.items = action.payload.items;
+      state.totalQuantity = action.payload.totalQuantity;
     }
   }
 });
+
+function sendCartData(cart: typeof cartInitialState) {
+  return async (dispatch: Dispatch<UnknownAction>) => {
+    dispatch(uiActions.showNotification({
+      status: 'pending',
+      title: 'Sending data...',
+      message: 'Sending cart data to firebase.'
+    }));
+
+    const sendRequest = async () => {
+      const response = await fetch('https://react-practice-85ca9-default-rtdb.firebaseio.com/cart.json', {
+        method: 'PUT',
+        body: JSON.stringify(cart)
+      });
+
+      if (!response.ok) {
+        throw new Error('Sending cart data failed.');
+      }
+    };
+
+    try {
+      await sendRequest();
+      dispatch(uiActions.showNotification({
+        status: 'success',
+        title: 'Success ...!',
+        message: 'Cart data successfully sent to firebase.'
+      }));
+    }
+    catch (error) {
+      dispatch(uiActions.showNotification({
+        status: 'error',
+        title: 'Error ...!',
+        message: 'Sending cart data failed.'
+      }));
+      throw new Error('Sending cart data failed.');
+    }
+  };
+}
 
 const cartReducer = cartSlice.reducer;
 const cartActions = cartSlice.actions;
 
 export {
-  cartActions, cartReducer
+  cartActions, cartReducer, sendCartData
 };

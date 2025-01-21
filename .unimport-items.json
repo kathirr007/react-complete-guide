@@ -206,6 +206,18 @@
     "__source": "dir"
   },
   {
+    "name": "fetchCartData",
+    "as": "fetchCartData",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/cart-actions.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "cartInitialState",
+    "as": "cartInitialState",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/cart.ts",
+    "__source": "dir"
+  },
+  {
     "name": "cartActions",
     "as": "cartActions",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/cart.ts",
@@ -214,6 +226,12 @@
   {
     "name": "cartReducer",
     "as": "cartReducer",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/cart.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "sendCartData",
+    "as": "sendCartData",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/cart.ts",
     "__source": "dir"
   },

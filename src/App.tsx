@@ -1,3 +1,4 @@
+import type { UnknownAction } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 
@@ -11,42 +12,19 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const sendCartData = async () => {
-      dispatch(uiActions.showNotification({
-        status: 'pending',
-        title: 'Sending data...',
-        message: 'Sending cart data to firebase.'
-      }));
+    dispatch(fetchCartData() as unknown as UnknownAction);
+  }, [dispatch]);
 
-      const response = await fetch('https://react-practice-85ca9-default-rtdb.firebaseio.com/cart.json', {
-        method: 'PUT',
-        body: JSON.stringify(cart)
-      });
-
-      if (!response.ok) {
-        throw new Error('Sending cart data failed.');
-      }
-
-      dispatch(uiActions.showNotification({
-        status: 'success',
-        title: 'Success ...!',
-        message: 'Cart data successfully sent to firebase.'
-      }));
-    };
-
+  useEffect(() => {
     if (isInitial) {
       isInitial = false;
       return;
     }
 
-    sendCartData().catch((error) => {
-      dispatch(uiActions.showNotification({
-        status: 'error',
-        title: 'Error ...!',
-        message: 'Sending cart data failed.'
-      }));
-      throw new Error(error);
-    });
+    if (cart.isChanged) {
+      const { isChanged, ...newCart } = cart;
+      dispatch(sendCartData(newCart) as unknown as UnknownAction);
+    }
   }, [cart, dispatch]);
 
   return (
