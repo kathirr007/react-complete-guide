@@ -224,6 +224,12 @@
     "__source": "dir"
   },
   {
+    "name": "frontEndBaseUrl",
+    "as": "frontEndBaseUrl",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
+    "__source": "dir"
+  },
+  {
     "name": "useInput",
     "as": "useInput",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useInput.ts",

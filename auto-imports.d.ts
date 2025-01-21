@@ -46,6 +46,7 @@ declare global {
   const displayMsg: typeof import('./src/utils/index')['displayMsg']
   const fetchCartData: typeof import('./src/store/cart-actions')['fetchCartData']
   const forwardRef: typeof import('react')['forwardRef']
+  const frontEndBaseUrl: typeof import('./src/hooks/useHttp')['frontEndBaseUrl']
   const isDesktop: typeof import('./src/hooks/useInput')['isDesktop']
   const isDevBuild: typeof import('./src/hooks/useHttp')['isDevBuild']
   const isMobile: typeof import('./src/hooks/useInput')['isMobile']

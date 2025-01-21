@@ -74,6 +74,7 @@
     "uiReducer": true,
     "isDevBuild": true,
     "isProBuild": true,
-    "baseUrl": true
+    "baseUrl": true,
+    "frontEndBaseUrl": true
   }
 }
