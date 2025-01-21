@@ -12,7 +12,7 @@ export function Checkout() {
   const cartCtx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
 
-  const { data, error, sendRequest, clearData } = useHttp('http://localhost:3010/orders', requestConfig);
+  const { data, error, sendRequest, clearData } = useHttp(`${baseUrl}/orders`, requestConfig);
 
   const cartTotal = cartCtx.items.reduce((cartTotalPrice: number, item: Meal) => {
     return cartTotalPrice + (+item.price * (item.quantity ?? 0));

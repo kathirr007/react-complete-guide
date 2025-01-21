@@ -7,7 +7,7 @@ export function Meals() {
 
   useEffect(() => {
     async function fetchMeals() {
-      const res = await fetch('http://localhost:3010/meals');
+      const res = await fetch(`${baseUrl}/meals`);
 
       if (!res.ok) {
         // handle api errors
@@ -20,7 +20,7 @@ export function Meals() {
     fetchMeals();
   }, []); */
 
-  const { data: loadedMeals, error, isLoading } = useHttp('http://localhost:3010/meals', requestConfig, []);
+  const { data: loadedMeals, error, isLoading } = useHttp(`${baseUrl}/meals`, requestConfig, []);
 
   if (isLoading) {
     return <p className="meal-item p-4">Fetching meals list..., please wait.</p>;

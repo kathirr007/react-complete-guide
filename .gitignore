@@ -29,3 +29,4 @@ dist-ssr
 *.stylelintcache
 *.eslintcache
 .vercel
+.env

@@ -71,6 +71,9 @@
     "sendCartData": true,
     "store": true,
     "uiActions": true,
-    "uiReducer": true
+    "uiReducer": true,
+    "isDevBuild": true,
+    "isProBuild": true,
+    "baseUrl": true
   }
 }

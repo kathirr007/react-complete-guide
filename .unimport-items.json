@@ -206,6 +206,24 @@
     "__source": "dir"
   },
   {
+    "name": "isDevBuild",
+    "as": "isDevBuild",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "isProBuild",
+    "as": "isProBuild",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "baseUrl",
+    "as": "baseUrl",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
+    "__source": "dir"
+  },
+  {
     "name": "useInput",
     "as": "useInput",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useInput.ts",
