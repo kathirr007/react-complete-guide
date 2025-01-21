@@ -8,19 +8,32 @@ export {}
 declare global {
   const Cart: typeof import('@/components/Cart/index.tsx')['Cart']
   const CartButton: typeof import('@/components/Cart/Button.tsx')['Button']
+  const CartContext: typeof import('./src/store/CartContext.jsx')['CartContext']
+  const CartContextProvider: typeof import('./src/store/CartContext.jsx')['CartContextProvider']
   const CartItem: typeof import('@/components/Cart/Item.tsx')['Item']
+  const Checkout: typeof import('@/components/Checkout.tsx')['Checkout']
+  const ErrorBlock: typeof import('@/components/ErrorBlock.tsx')['ErrorBlock']
+  const Header: typeof import('@/components/Header.jsx')['Header']
   const Layout: typeof import('@/components/Layout/index.tsx')['Layout']
   const LayoutMainHeader: typeof import('@/components/Layout/MainHeader.tsx')['MainHeader']
+  const MealItem: typeof import('@/components/MealItem.tsx')['MealItem']
+  const Meals: typeof import('@/components/Meals.tsx')['Meals']
   const ShopProductItem: typeof import('@/components/Shop/ProductItem.tsx')['ProductItem']
   const ShopProducts: typeof import('@/components/Shop/Products.tsx')['Products']
   const UICard: typeof import('@/components/UI/Card.tsx')['Card']
   const UICartToast: typeof import('@/components/UI/CartToast.tsx')['CartToast']
   const UINotification: typeof import('@/components/UI/Notification.tsx')['Notification']
   const UIToast: typeof import('@/components/UI/Toast.tsx')['Toast']
+  const UiButton: typeof import('@/components/ui/Button.tsx')['Button']
+  const UiInput: typeof import('@/components/ui/Input.tsx')['Input']
+  const UiModal: typeof import('@/components/ui/Modal.tsx')['Modal']
+  const UserProgressContext: typeof import('./src/store/UserProgressContext')['UserProgressContext']
+  const UserProgressContextProvider: typeof import('./src/store/UserProgressContext')['UserProgressContextProvider']
   const cartActions: typeof import('./src/store/cart')['cartActions']
   const cartInitialState: typeof import('./src/store/cart')['cartInitialState']
   const cartReducer: typeof import('./src/store/cart')['cartReducer']
   const createRef: typeof import('react')['createRef']
+  const currencyFormatter: typeof import('./src/utils/helpers')['currencyFormatter']
   const displayMsg: typeof import('./src/utils/index')['displayMsg']
   const fetchCartData: typeof import('./src/store/cart-actions')['fetchCartData']
   const forwardRef: typeof import('react')['forwardRef']
@@ -37,9 +50,11 @@ declare global {
   const useDeferredValue: typeof import('react')['useDeferredValue']
   const useEffect: typeof import('react')['useEffect']
   const useHref: typeof import('react-router')['useHref']
+  const useHttp: typeof import('./src/hooks/useHttp')['useHttp']
   const useId: typeof import('react')['useId']
   const useImperativeHandle: typeof import('react')['useImperativeHandle']
   const useInRouterContext: typeof import('react-router')['useInRouterContext']
+  const useInput: typeof import('./src/hooks/useInput')['useInput']
   const useInsertionEffect: typeof import('react')['useInsertionEffect']
   const useLayoutEffect: typeof import('react')['useLayoutEffect']
   const useLocation: typeof import('react-router')['useLocation']
@@ -62,4 +77,7 @@ declare global {
   // @ts-ignore
   export type { CartItemType } from './src/store/cart'
   import('./src/store/cart')
+  // @ts-ignore
+  export type { RootState } from './src/store/index'
+  import('./src/store/index')
 }

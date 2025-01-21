@@ -249,6 +249,13 @@
     "__source": "dir"
   },
   {
+    "name": "RootState",
+    "as": "RootState",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/index.ts",
+    "type": true,
+    "__source": "dir"
+  },
+  {
     "name": "uiActions",
     "as": "uiActions",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/ui.ts",

@@ -5,9 +5,9 @@ import { ToastContainer } from 'react-toastify';
 let isInitial = true;
 
 function App() {
-  const isCartVisible = useSelector((state: ReturnType<typeof store.getState>) => state.uiStore.isVisible);
-  const cart = useSelector((state: ReturnType<typeof store.getState>) => state.cartStore);
-  const notification = useSelector((state: ReturnType<typeof store.getState>) => state.uiStore.notification);
+  const isCartVisible = useSelector((state: RootState) => state.uiStore.isVisible);
+  const cart = useSelector((state: RootState) => state.cartStore);
+  const notification = useSelector((state: RootState) => state.uiStore.notification);
 
   const dispatch = useDispatch();
 

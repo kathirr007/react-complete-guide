@@ -68,6 +68,21 @@
     "UINotification": true,
     "sendCartData": true,
     "cartInitialState": true,
-    "fetchCartData": true
+    "fetchCartData": true,
+    "CartContext": true,
+    "CartContextProvider": true,
+    "Checkout": true,
+    "ErrorBlock": true,
+    "MealItem": true,
+    "Meals": true,
+    "UiButton": true,
+    "UiInput": true,
+    "UiModal": true,
+    "UserProgressContext": true,
+    "UserProgressContextProvider": true,
+    "currencyFormatter": true,
+    "useHttp": true,
+    "useInput": true,
+    "RootState": true
   }
 }
