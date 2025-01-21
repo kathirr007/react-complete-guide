@@ -8,11 +8,24 @@ const requestConfig: RequestInit = {
   }
 };
 
+const requestConfig2: RequestInit = {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+};
+
+const ordersRequestConfig = {};
+
 export function Checkout() {
   const cartCtx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
 
-  const { data, error, sendRequest, clearData } = useHttp(`${baseUrl}/orders`, requestConfig);
+  const { data: existingOrders, error: ordersError, isLoading } = useHttp(`https://react-practice-85ca9-default-rtdb.firebaseio.com/orders.json`, ordersRequestConfig, []);
+
+  const url = isDevBuild ? `${baseUrl}/orders` : 'https://react-practice-85ca9-default-rtdb.firebaseio.com/orders.json';
+
+  const { data, error, sendRequest, clearData, clearError } = useHttp(url, isDevBuild ? requestConfig : requestConfig2);
 
   const cartTotal = cartCtx.items.reduce((cartTotalPrice: number, item: Meal) => {
     return cartTotalPrice + (+item.price * (item.quantity ?? 0));
@@ -43,13 +56,25 @@ export function Checkout() {
   } */
   async function handleCheckoutAction(prevState: any, formData: any) {
     const customerData = { ...Object.fromEntries(formData.entries()) };
+    const allOrders = existingOrders ? [...existingOrders] : [];
 
-    await sendRequest(JSON.stringify({
+    allOrders.push({
       order: {
         items: cartCtx.items,
         customer: { ...customerData }
       }
-    }));
+    });
+    if (isDevBuild) {
+      await sendRequest(JSON.stringify({
+        order: {
+          items: cartCtx.items,
+          customer: { ...customerData }
+        }
+      }));
+    }
+    else {
+      await sendRequest(JSON.stringify(allOrders));
+    }
   }
 
   const [formState, formAction, isSending] = useActionState(handleCheckoutAction, null);

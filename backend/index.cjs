@@ -13,7 +13,6 @@ const express = require('express');
 const app = express();
 
 const PORT = process.env.PORT || 3010;
-const isDevBuild = process.env.NODE_ENV === 'development';
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -65,9 +64,8 @@ app.post('/orders', async (req, res) => {
   const orders = await fs.readFile(path.join(__currentDirname, './data/orders.json'), 'utf8');
   const allOrders = JSON.parse(orders);
   allOrders.push(newOrder);
-  // const filePath = path.join("/tmp", "data.json");
-  // fs.writeFileSync(filePath, JSON.stringify(data));
-  await fs.writeFile(path.join(`${isDevBuild ? __currentDirname : '/tmp'}`, './data/orders.json'), JSON.stringify(allOrders));
+  // throw new Error('failed to update');
+  await fs.writeFile(path.join(__currentDirname, './data/orders.json'), JSON.stringify(allOrders));
   res.status(201).json({ message: 'Order created!' });
 });
 
