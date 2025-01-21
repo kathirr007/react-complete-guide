@@ -1,4 +1,4 @@
-name: GitHub Actions Vercel Production Deployment for Food Order App
+name: Food Order App
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_FOOD_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_FOOD_PROJECT_ID }}
