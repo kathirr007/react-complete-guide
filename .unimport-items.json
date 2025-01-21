@@ -45,6 +45,11 @@
     "as": "UICartToast"
   },
   {
+    "from": "@/components/UI/Notification.tsx",
+    "name": "Notification",
+    "as": "UINotification"
+  },
+  {
     "from": "react",
     "name": "useState",
     "as": "useState"

@@ -64,6 +64,7 @@
     "CartItemType": true,
     "UIToast": true,
     "displayMsg": true,
-    "UICartToast": true
+    "UICartToast": true,
+    "UINotification": true
   }
 }
