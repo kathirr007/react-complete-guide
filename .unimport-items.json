@@ -1,23 +1,23 @@
 [
   {
-    "from": "@/components/Cart.tsx",
-    "name": "Cart",
-    "as": "Cart"
+    "from": "@/components/Badge.jsx",
+    "name": "Badge",
+    "as": "Badge"
   },
   {
-    "from": "@/components/CartItem.tsx",
-    "name": "CartItem",
-    "as": "CartItem"
+    "from": "@/components/ChallengeItem.jsx",
+    "name": "ChallengeItem",
+    "as": "ChallengeItem"
   },
   {
-    "from": "@/components/Checkout.tsx",
-    "name": "Checkout",
-    "as": "Checkout"
+    "from": "@/components/Challenges.jsx",
+    "name": "Challenges",
+    "as": "Challenges"
   },
   {
-    "from": "@/components/ErrorBlock.tsx",
-    "name": "ErrorBlock",
-    "as": "ErrorBlock"
+    "from": "@/components/ChallengeTabs.jsx",
+    "name": "ChallengeTabs",
+    "as": "ChallengeTabs"
   },
   {
     "from": "@/components/Header.jsx",
@@ -25,29 +25,14 @@
     "as": "Header"
   },
   {
-    "from": "@/components/MealItem.tsx",
-    "name": "MealItem",
-    "as": "MealItem"
-  },
-  {
-    "from": "@/components/Meals.tsx",
-    "name": "Meals",
-    "as": "Meals"
-  },
-  {
-    "from": "@/components/ui/Button.tsx",
-    "name": "Button",
-    "as": "UiButton"
-  },
-  {
-    "from": "@/components/ui/Input.tsx",
-    "name": "Input",
-    "as": "UiInput"
-  },
-  {
-    "from": "@/components/ui/Modal.tsx",
+    "from": "@/components/Modal.jsx",
     "name": "Modal",
-    "as": "UiModal"
+    "as": "Modal"
+  },
+  {
+    "from": "@/components/NewChallenge.jsx",
+    "name": "NewChallenge",
+    "as": "NewChallenge"
   },
   {
     "from": "react",
@@ -200,69 +185,15 @@
     "as": "useRoutes"
   },
   {
-    "name": "useHttp",
-    "as": "useHttp",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
+    "name": "default",
+    "as": "challengesContext",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/challenges-context.jsx",
     "__source": "dir"
   },
   {
-    "name": "isDevBuild",
-    "as": "isDevBuild",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "isProBuild",
-    "as": "isProBuild",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "baseUrl",
-    "as": "baseUrl",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "frontEndBaseUrl",
-    "as": "frontEndBaseUrl",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useHttp.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "useInput",
-    "as": "useInput",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/hooks/useInput.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "currencyFormatter",
-    "as": "currencyFormatter",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/helpers.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "CartContext",
-    "as": "CartContext",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/CartContext.jsx",
-    "__source": "dir"
-  },
-  {
-    "name": "CartContextProvider",
-    "as": "CartContextProvider",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/CartContext.jsx",
-    "__source": "dir"
-  },
-  {
-    "name": "UserProgressContextProvider",
-    "as": "UserProgressContextProvider",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/UserProgressContext.tsx",
-    "__source": "dir"
-  },
-  {
-    "name": "UserProgressContext",
-    "as": "UserProgressContext",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/UserProgressContext.tsx",
+    "name": "ChallengesContext",
+    "as": "ChallengesContext",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/challenges-context.jsx",
     "__source": "dir"
   }
 ]

@@ -75,6 +75,15 @@
     "isDevBuild": true,
     "isProBuild": true,
     "baseUrl": true,
-    "frontEndBaseUrl": true
+    "frontEndBaseUrl": true,
+    "Badge": true,
+    "ChallengeItem": true,
+    "ChallengeTabs": true,
+    "Challenges": true,
+    "ChallengesContext": true,
+    "Modal": true,
+    "NewChallenge": true,
+    "challengesContext": true,
+    "TestAnimation": true
   }
 }
