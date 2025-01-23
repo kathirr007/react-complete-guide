@@ -139,3 +139,7 @@ main {
 #travel-demo button:active {
   background-color: #363e57;
 }
+
+.text-center {
+  text-align: center;
+}

@@ -42,7 +42,7 @@ const items2 = ['Kathiravan', 'Kannan', 'Kumar', 'Karthickeyan'];
 function App() {
   return (
     <>
-      <h1>React Patterns & Practices</h1>
+      <h1 className="text-center">React Patterns & Practices</h1>
       <main>
         <section>
           <h2>Why work with us?</h2>
