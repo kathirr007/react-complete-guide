@@ -33,7 +33,8 @@ export default defineConfig({
       imports: [
         ...getComponentImports(),
         'react',
-        'react-router'
+        'react-router',
+        'ahooks'
       ],
       dumpUnimportItems: true
     }),
