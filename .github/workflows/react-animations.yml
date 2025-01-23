@@ -4,7 +4,7 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_REACT_ANIMATIONS_PROJECT_ID }}
 on:
   push:
-    branches: [ "25_react_animations" ]
+    branches: [ "26_react_animations" ]
 
 jobs:
   Deploy-Production:
