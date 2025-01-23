@@ -1,5 +1,25 @@
 [
   {
+    "from": "@/components/Accordion/Content.tsx",
+    "name": "Content",
+    "as": "AccordionContent"
+  },
+  {
+    "from": "@/components/Accordion/index.tsx",
+    "name": "index",
+    "as": "AccordionIndex"
+  },
+  {
+    "from": "@/components/Accordion/Item.tsx",
+    "name": "Item",
+    "as": "AccordionItem"
+  },
+  {
+    "from": "@/components/Accordion/Title.tsx",
+    "name": "Title",
+    "as": "AccordionTitle"
+  },
+  {
     "from": "react",
     "name": "useState",
     "as": "useState"
@@ -148,5 +168,29 @@
     "from": "react-router",
     "name": "useRoutes",
     "as": "useRoutes"
+  },
+  {
+    "name": "AccordionContext",
+    "as": "AccordionContext",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/index.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "useAccordionContext",
+    "as": "useAccordionContext",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/index.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "AccordionItemContext",
+    "as": "AccordionItemContext",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/index.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "useAccordionItemContext",
+    "as": "useAccordionItemContext",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/index.ts",
+    "__source": "dir"
   }
 ]

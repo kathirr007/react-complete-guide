@@ -84,6 +84,19 @@
     "Modal": true,
     "NewChallenge": true,
     "challengesContext": true,
-    "TestAnimation": true
+    "TestAnimation": true,
+    "Accordion": true,
+    "AccordionItem": true,
+    "AccordionContext": true,
+    "useAccordionContext": true,
+    "AccordionTitle": true,
+    "AccordionItemContext": true,
+    "useAccordionItemContext": true,
+    "AccordionContent": true,
+    "AccordionAccordion": true,
+    "AccordionAccordionContent": true,
+    "AccordionAccordionItem": true,
+    "AccordionAccordionTitle": true,
+    "AccordionIndex": true
   }
 }
