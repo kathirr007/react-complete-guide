@@ -1,381 +1,131 @@
-@import 'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap';
-
 * {
   box-sizing: border-box;
 }
 
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 body {
-  min-height: 100vh;
-  margin: 0;
-  font-family: Lato, serif;
-  color: #d9e2f1;
-  background: linear-gradient(#222c31, #111d32);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #151925;
+  color: white;
 }
 
 #main-header {
+  max-width: 40rem;
+  margin: 2rem auto 4rem auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 40rem;
-  margin: 2rem auto;
-  color: #fff;
+  gap: 2rem;
+  color: #c1d9fa;
 }
 
-#hero-img {
-  display: block;
-  width: 80%;
-  height: 60vh;
-  margin: 2rem auto;
-  object-fit: cover;
-}
-
-#main-header h1 {
-  font-family: Quicksand, sans-serif;
-  font-size: 1.5rem;
-  color: #84b0fc;
-}
-
-#welcome-header {
-  height: 100vh;
-}
-
-#city-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#hero-image {
-  position: absolute;
-  bottom: 10%;
-  left: 25%;
-  width: 20rem;
-  max-width: 40%;
-  object-fit: cover;
-  filter: drop-shadow(0 0 6px rgb(0 0 0 / 50%));
-}
-
-#welcome-header-content {
-  position: absolute;
-  top: 30%;
-  left: calc(50% - 20rem);
-  z-index: 1;
-  width: 40rem;
-  text-align: center;
-  text-shadow: 0 0 6px rgb(0 0 0 / 50%);
-}
-
-#welcome-header-content h1 {
-  margin: 2rem 0;
-  font-size: 3rem;
-  color: #fff;
-}
-
-#cta-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  font-family: Quicksand, sans-serif;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-color: #0f61ef;
-  border-radius: 4px;
-}
-
-#cta-link:hover {
-  background-color: #0f86ef;
-}
-
-#welcome-content section {
-  margin: 6rem 0;
-}
-
-#welcome-content h2 {
-  margin: 2rem 0;
-  font-size: 2.5rem;
-  color: #f2f25d;
-}
-
-main {
-  width: 80%;
-  max-width: 40rem;
-  margin: 1rem auto;
-}
-
-#new-challenge label {
-  display: block;
-  margin-bottom: 0.15rem;
-  font-family: Quicksand, sans-serif;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: #414956;
-}
-
-#new-challenge input,
-#new-challenge textarea {
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-  font-family: Quicksand, sans-serif;
-  font-size: 0.8rem;
-  color: #414956;
-  background-color: #fff;
-  border: 1px solid #d9e2f1;
-  border-radius: 4px;
-}
-
-#new-challenge.invalid input,
-#new-challenge.invalid textares {
-  border: 1px solid rgb(207 9 62);
-}
-
-#new-challenge-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 3rem);
-  gap: 0.5rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-#new-challenge-images li {
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid transparent;
+#main-header img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
   border-radius: 50%;
 }
 
-#new-challenge-images li.selected {
-  border: 2px solid #0f61ef;
+#main-header h1,
+#main-header p {
+  margin: 0;
 }
 
-#new-challenge-images li img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+main {
+  max-width: 40rem;
+  margin: 2rem auto;
 }
 
-#challenges {
+.accordion {
+  margin: 2rem 0;
+  border: 1px solid #5d6273;
+  border-radius: 6px;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-item {
+  background-color: #1e2130;
+}
+
+.accordion-item-title {
+  margin: 0;
   padding: 1rem;
-  background-color: #22323a;
+  background-color: #363e57;
+  cursor: pointer;
+  font-size: 1.15rem;
+  color: #c1d9fa;
+}
+
+.accordion-item-content {
+  display: none;
+  padding: 1rem;
+  background-color: #2c344a;
+}
+
+.open {
+  display: block;
+}
+
+.searchable-list {
+  margin: 2rem 0;
+}
+
+.searchable-list input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #5d6273;
   border-radius: 6px;
-}
-
-#tabs {
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 1rem;
-  list-style: none;
-}
-
-#tabs button {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 0.25rem;
-  color: #b0caf9;
-  text-align: left;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  border-radius: 4px 4px 0 0;
-  box-shadow: none;
-}
-
-#tabs button:hover,
-#tabs button.selected {
-  /* background-color: #355767; */
-  color: #fff;
-}
-
-#tabs .active-tab-indicator {
-  border: 1.5px solid #0f86ef;
-  border-radius: 8px;
-}
-
-.challenge-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  max-width: 90%;
-  padding: 0;
-  margin: 2rem 0 0;
-  list-style: none;
-}
-
-.challenge-item {
-  width: 100%;
-}
-
-.challenge-item header {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.challenge-item-meta {
-  width: 100%;
-}
-
-.challenge-item header h2 {
-  margin: 0;
-  font-size: 1.25rem;
-  color: #b1c1d9;
-}
-
-.challenge-item header p {
-  margin-top: 0;
-  font-family: Quicksand, sans-serif;
-  font-size: 0.7rem;
-}
-
-.challenge-item-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-}
-
-.challenge-item-actions button {
-  padding: 0;
+  background-color: #1e2130;
+  color: white;
   font: inherit;
-  color: #7aaafc;
-  cursor: pointer;
-  background: transparent;
-  border: none;
 }
 
-.challenge-item-actions button:hover {
-  color: #5d7bf2;
-}
-
-.challenge-item-actions .btn-negative {
-  color: #ff7b7b;
-}
-
-.challenge-item-actions .btn-negative:hover {
-  color: #ff4f4f;
-}
-
-.challenge-item img {
-  width: 4rem;
-  height: 4rem;
-  object-fit: contain;
-}
-
-.challenge-item-details button {
-  padding: 0;
-  font: inherit;
-  color: #7aaafc;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-}
-
-.challenge-item-details-icon {
-  display: inline-block;
-  margin-left: 0.25rem;
-  font-size: 0.85rem;
-  transition: transform 0.3s ease-out;
-}
-
-.challenge-item-details.expanded .challenge-item-details-icon {
-  transform: rotate(180deg);
-}
-
-.challenge-item-description {
+.searchable-list ul {
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-.new-challenge-actions button,
-.button {
-  padding: 0.5rem 1rem;
-  color: #fff;
-  cursor: pointer;
-  background-color: #0f61ef;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+.place {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
 }
 
-.new-challenge-actions button:hover,
-.button:hover {
-  background-color: #0f3cef;
-}
-
-.modal {
-  top: 10%;
-  z-index: 10;
-  width: 30rem;
-  max-width: 90%;
-  padding: 1.5rem;
+.place img {
+  width: 5rem;
+  height: 5rem;
   border-radius: 6px;
-
-  /* animation: slide-up-fade-in 0.3s ease-out forwards; */
+  object-fit: cover;
 }
 
-/* @keyframes slide-up-fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
-
-.modal h2 {
-  margin-top: 0;
+.place h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #faf489;
 }
 
-.new-challenge-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-  margin-top: 1rem;
+.place p {
+  margin: 0.5rem 0;
+  color: #b3b5c6;
 }
 
-.new-challenge-actions button:first-of-type {
+#travel-demo button {
   padding: 0.5rem 1rem;
-  color: #314a77;
-  cursor: pointer;
-  background-color: transparent;
   border: none;
-  border-radius: 4px;
-  box-shadow: none;
+  border-radius: 6px;
+  background-color: #1e2130;
+  color: white;
+  font: inherit;
+  cursor: pointer;
 }
 
-.new-challenge-actions button:first-of-type:hover {
-  color: #0f3cef;
-  background-color: transparent;
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9;
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(0 0 0 / 75%);
-}
-
-.badge {
-  padding: 0.25rem 0.5rem;
-  margin-left: 0.5rem;
-  font-size: 0.5rem;
-  color: #fff;
-  background-color: #0f61ef;
-  border-radius: 4px;
+#travel-demo button:hover,
+#travel-demo button:active {
+  background-color: #363e57;
 }

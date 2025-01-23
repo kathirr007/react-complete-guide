@@ -1,40 +1,5 @@
 [
   {
-    "from": "@/components/Badge.jsx",
-    "name": "Badge",
-    "as": "Badge"
-  },
-  {
-    "from": "@/components/ChallengeItem.jsx",
-    "name": "ChallengeItem",
-    "as": "ChallengeItem"
-  },
-  {
-    "from": "@/components/Challenges.jsx",
-    "name": "Challenges",
-    "as": "Challenges"
-  },
-  {
-    "from": "@/components/ChallengeTabs.jsx",
-    "name": "ChallengeTabs",
-    "as": "ChallengeTabs"
-  },
-  {
-    "from": "@/components/Header.jsx",
-    "name": "Header",
-    "as": "Header"
-  },
-  {
-    "from": "@/components/Modal.jsx",
-    "name": "Modal",
-    "as": "Modal"
-  },
-  {
-    "from": "@/components/NewChallenge.jsx",
-    "name": "NewChallenge",
-    "as": "NewChallenge"
-  },
-  {
     "from": "react",
     "name": "useState",
     "as": "useState"
@@ -183,17 +148,5 @@
     "from": "react-router",
     "name": "useRoutes",
     "as": "useRoutes"
-  },
-  {
-    "name": "default",
-    "as": "challengesContext",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/challenges-context.jsx",
-    "__source": "dir"
-  },
-  {
-    "name": "ChallengesContext",
-    "as": "ChallengesContext",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/challenges-context.jsx",
-    "__source": "dir"
   }
 ]
