@@ -6,8 +6,8 @@
   },
   {
     "from": "@/components/Accordion/index.tsx",
-    "name": "index",
-    "as": "AccordionIndex"
+    "name": "Accordion",
+    "as": "Accordion"
   },
   {
     "from": "@/components/Accordion/Item.tsx",

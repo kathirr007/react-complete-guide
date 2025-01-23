@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-export function AccordionTitle({ children, className }: Readonly<{ children: ReactNode; className?: string }>) {
+export function Title({ children, className }: Readonly<{ children: ReactNode; className?: string }>) {
   const { toggleItem } = useAccordionContext();
   const id = useAccordionItemContext();
 

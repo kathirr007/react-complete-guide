@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-export function AccordionContent({ children, className }: Readonly<{ children: ReactNode; className?: string }>) {
+export function Content({ children, className }: Readonly<{ children: ReactNode; className?: string }>) {
   const { openItemId } = useAccordionContext();
   const id = useAccordionItemContext();
 
