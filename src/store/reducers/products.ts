@@ -1,7 +1,7 @@
 import { TOGGLE_FAV } from '../actions/products';
 
 export interface Product {
-  id: string;
+  id?: string;
   title: string;
   description: string;
   isFavorite: boolean;
