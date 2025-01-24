@@ -1,25 +1,25 @@
 .main-header {
-  height: 3.5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 3.5rem;
   background-color: #ff2058;
 }
 
 .main-header nav {
-  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .main-header ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .main-header li {
@@ -28,9 +28,9 @@
 }
 
 .main-header a {
-  text-decoration: none;
-  color: white;
   font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 
 .main-header a:hover,
