@@ -1,10 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { combineReducers, createStore } from 'redux';
+
+import App from './App';
+import productReducer from './store/reducers/products';
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const rootReducer = combineReducers({
+  shop: productReducer
+});
+
+const store = createStore(rootReducer);
+
+export type RootState = ReturnType<typeof store.getState>;
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 );

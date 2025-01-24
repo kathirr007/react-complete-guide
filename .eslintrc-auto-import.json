@@ -176,6 +176,13 @@
     "useUpdateLayoutEffect": true,
     "useVirtualList": true,
     "useWebSocket": true,
-    "useWhyDidYouUpdate": true
+    "useWhyDidYouUpdate": true,
+    "FavoritesFavoriteItem": true,
+    "NavNavigation": true,
+    "ProductsProductItem": true,
+    "TOGGLE_FAV": true,
+    "products": true,
+    "toggleFav": true,
+    "Product": true
   }
 }

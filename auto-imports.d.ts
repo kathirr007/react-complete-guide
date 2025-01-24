@@ -6,45 +6,18 @@
 // biome-ignore lint: disable
 export {}
 declare global {
-  const Accordion: typeof import('@/components/Accordion/index.tsx')['Accordion']
-  const AccordionAccordion: typeof import('@/components/Accordion/Accordion.tsx')['Accordion']
-  const AccordionAccordionContent: typeof import('@/components/Accordion/AccordionContent.tsx')['AccordionContent']
-  const AccordionAccordionItem: typeof import('@/components/Accordion/AccordionItem.tsx')['AccordionItem']
-  const AccordionAccordionTitle: typeof import('@/components/Accordion/AccordionTitle.tsx')['AccordionTitle']
-  const AccordionContent: typeof import('@/components/Accordion/Content.tsx')['Content']
-  const AccordionContext: typeof import('./src/utils/index')['AccordionContext']
-  const AccordionIndex: typeof import('@/components/Accordion/index.tsx')['index']
-  const AccordionItem: typeof import('@/components/Accordion/Item.tsx')['Item']
-  const AccordionItemContext: typeof import('./src/utils/index')['AccordionItemContext']
-  const AccordionTitle: typeof import('@/components/Accordion/Title.tsx')['Title']
-  const Cart: typeof import('@/components/Cart/index.tsx')['Cart']
-  const CartButton: typeof import('@/components/Cart/Button.tsx')['Button']
-  const CartItem: typeof import('@/components/Cart/Item.tsx')['Item']
-  const Layout: typeof import('@/components/Layout/index.tsx')['Layout']
-  const LayoutMainHeader: typeof import('@/components/Layout/MainHeader.tsx')['MainHeader']
-  const Place: typeof import('@/components/Place.tsx')['Place']
-  const SearchableList: typeof import('@/components/SearchableList/index.tsx')['SearchableList']
-  const ShopProductItem: typeof import('@/components/Shop/ProductItem.tsx')['ProductItem']
-  const ShopProducts: typeof import('@/components/Shop/Products.tsx')['Products']
+  const FavoritesFavoriteItem: typeof import('@/components/Favorites/FavoriteItem.tsx')['FavoriteItem']
+  const NavNavigation: typeof import('@/components/Nav/Navigation.tsx')['Navigation']
+  const ProductsProductItem: typeof import('@/components/Products/ProductItem.tsx')['ProductItem']
+  const TOGGLE_FAV: typeof import('./src/store/actions/products')['TOGGLE_FAV']
   const UICard: typeof import('@/components/UI/Card.tsx')['Card']
-  const UICartToast: typeof import('@/components/UI/CartToast.tsx')['CartToast']
-  const UINotification: typeof import('@/components/UI/Notification.tsx')['Notification']
-  const cartActions: typeof import('./src/store/cart')['cartActions']
-  const cartInitialState: typeof import('./src/store/cart')['cartInitialState']
-  const cartReducer: typeof import('./src/store/cart')['cartReducer']
   const createRef: typeof import('react')['createRef']
-  const displayMsg: typeof import('./src/utils/index')['displayMsg']
-  const fetchCartData: typeof import('./src/store/cart-actions')['fetchCartData']
   const forwardRef: typeof import('react')['forwardRef']
   const lazy: typeof import('react')['lazy']
   const memo: typeof import('react')['memo']
-  const sendCartData: typeof import('./src/store/cart')['sendCartData']
+  const products: typeof import('./src/store/reducers/products')['default']
   const startTransition: typeof import('react')['startTransition']
-  const store: typeof import('./src/store/index')['store']
-  const uiActions: typeof import('./src/store/ui')['uiActions']
-  const uiReducer: typeof import('./src/store/ui')['uiReducer']
-  const useAccordionContext: typeof import('./src/utils/index')['useAccordionContext']
-  const useAccordionItemContext: typeof import('./src/utils/index')['useAccordionItemContext']
+  const toggleFav: typeof import('./src/store/actions/products')['toggleFav']
   const useAntdTable: typeof import('ahooks')['useAntdTable']
   const useAsyncEffect: typeof import('ahooks')['useAsyncEffect']
   const useBoolean: typeof import('ahooks')['useBoolean']
@@ -147,4 +120,10 @@ declare global {
   const useVirtualList: typeof import('ahooks')['useVirtualList']
   const useWebSocket: typeof import('ahooks')['useWebSocket']
   const useWhyDidYouUpdate: typeof import('ahooks')['useWhyDidYouUpdate']
+}
+// for type re-export
+declare global {
+  // @ts-ignore
+  export type { Product } from './src/store/reducers/products'
+  import('./src/store/reducers/products')
 }
