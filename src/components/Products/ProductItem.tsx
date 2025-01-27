@@ -1,5 +1,3 @@
-import { ProductsContext } from '@/context/products-context';
-
 import './ProductItem.css';
 
 function ProductItem(props: any) {

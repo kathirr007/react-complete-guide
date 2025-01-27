@@ -1,13 +1,14 @@
-import type { RootState } from '@/main';
-import React from 'react';
+import type { Product } from '@/store/reducers/products';
 
-import { useSelector } from 'react-redux';
 import './Products.css';
 
 function Favorites(props: any) {
-  const favoriteProducts = useSelector((state: RootState) =>
+  /* const favoriteProducts = useSelector((state: RootState) =>
     state.shop.products.filter(p => p.isFavorite)
-  );
+  ); */
+  const { products } = useContext(ProductsContext);
+  const favoriteProducts = products.filter((prod: Product) => prod.isFavorite);
+
   let content = <p className="placeholder">Got no favorites yet!</p>;
   if (favoriteProducts.length > 0) {
     content = (

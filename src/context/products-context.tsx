@@ -1,13 +1,4 @@
 import type { Product } from '@/store/reducers/products';
-import { createContext } from 'react';
-
-export const ProductsContext = createContext<{
-  products: Product[];
-  toggleFav: (id: string) => void;
-}>({
-      products: [],
-      toggleFav: (id: string): void => {}
-    });
 
 export function ProductsContextProvider(props: any) {
   const [productsList, setProductsList] = useState<Product[]>([

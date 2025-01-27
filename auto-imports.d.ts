@@ -8,6 +8,7 @@ export {}
 declare global {
   const FavoritesFavoriteItem: typeof import('@/components/Favorites/FavoriteItem.tsx')['FavoriteItem']
   const NavNavigation: typeof import('@/components/Nav/Navigation.tsx')['Navigation']
+  const ProductsContext: typeof import('./src/utils/index')['ProductsContext']
   const ProductsProductItem: typeof import('@/components/Products/ProductItem.tsx')['ProductItem']
   const TOGGLE_FAV: typeof import('./src/store/actions/products')['TOGGLE_FAV']
   const UICard: typeof import('@/components/UI/Card.tsx')['Card']

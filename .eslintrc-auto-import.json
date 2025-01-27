@@ -183,6 +183,7 @@
     "TOGGLE_FAV": true,
     "products": true,
     "toggleFav": true,
-    "Product": true
+    "Product": true,
+    "ProductsContext": true
   }
 }

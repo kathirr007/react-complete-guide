@@ -1,8 +1,6 @@
 import { ProductsContextProvider } from '@/context/products-context';
 import productReducer from '@/store/reducers/products';
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
 
 import { BrowserRouter } from 'react-router-dom';
 import { combineReducers, createStore } from 'redux';

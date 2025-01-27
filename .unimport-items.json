@@ -555,6 +555,12 @@
     "as": "useWhyDidYouUpdate"
   },
   {
+    "name": "ProductsContext",
+    "as": "ProductsContext",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/index.ts",
+    "__source": "dir"
+  },
+  {
     "name": "TOGGLE_FAV",
     "as": "TOGGLE_FAV",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/actions/products.ts",
