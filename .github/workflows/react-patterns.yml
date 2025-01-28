@@ -1,4 +1,4 @@
-name: React-Animations
+name: React-Patterns
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_REACT_PATTERNS_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_REACT_PATTERNS_PROJECT_ID }}

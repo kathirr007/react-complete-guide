@@ -1,4 +1,4 @@
-name: React-Animations
+name: Redux-to-Hooks
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_REDUX_TO_HOOKS_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_REDUX_TO_HOOKS_PROJECT_ID }}
