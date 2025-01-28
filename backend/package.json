@@ -5,9 +5,9 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "main": "index.cjs",
+  "main": "app.cjs",
   "scripts": {
-    "start": "node index.cjs"
+    "start": "node app.cjs"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
