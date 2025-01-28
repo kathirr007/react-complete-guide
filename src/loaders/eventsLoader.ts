@@ -1,5 +1,5 @@
 export async function loadEvents() {
-  const response = await fetch('http://localhost:8080/events');
+  const response = await fetch(`${baseUrl}/events`);
   if (!response.ok) {
     // handle errors
     throw new Response(JSON.stringify({ message: 'Could not fetch the events data.' }), { status: 500 });

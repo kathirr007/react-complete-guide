@@ -580,6 +580,24 @@
     "as": "useWhyDidYouUpdate"
   },
   {
+    "name": "isDevBuild",
+    "as": "isDevBuild",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/useHttp.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "isProBuild",
+    "as": "isProBuild",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/useHttp.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "baseUrl",
+    "as": "baseUrl",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/useHttp.ts",
+    "__source": "dir"
+  },
+  {
     "name": "loadEvent",
     "as": "loadEvent",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/loaders/eventLoader.ts",

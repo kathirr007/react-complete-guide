@@ -4,7 +4,7 @@ export async function eventAction({ request, params }: ActionFunctionArgs) {
   const data = await request.formData();
   const eventData = Object.fromEntries(data.entries());
 
-  let url = 'http://localhost:8080/events';
+  let url = `${baseUrl}/events`;
 
   if (request.method === 'PATCH') {
     url = `${url}/${params.eventId}`;

@@ -1,16 +1,19 @@
 const fs = require('node:fs/promises');
+const path = require('node:path');
+
+const __currentDirname = path.resolve();
 
 const { v4: generateId } = require('uuid');
 
 const { NotFoundError } = require('../util/errors');
 
 async function readData() {
-  const data = await fs.readFile('events.json', 'utf8');
+  const data = await fs.readFile(path.join(__currentDirname, 'events.json'), 'utf8');
   return JSON.parse(data);
 }
 
 async function writeData(data) {
-  await fs.writeFile('events.json', JSON.stringify(data));
+  await fs.writeFile(path.join (__currentDirname, 'events.json'), JSON.stringify(data));
 }
 
 async function getAll() {
@@ -27,9 +30,9 @@ async function get(id) {
     throw new NotFoundError('Could not find any events.');
   }
 
-  const event = storedData.events.find((ev) => ev.id === id);
+  const event = storedData.events.find(ev => ev.id === id);
   if (!event) {
-    throw new NotFoundError('Could not find event for id ' + id);
+    throw new NotFoundError(`Could not find event for id ${id}`);
   }
 
   return event;
@@ -47,9 +50,9 @@ async function replace(id, data) {
     throw new NotFoundError('Could not find any events.');
   }
 
-  const index = storedData.events.findIndex((ev) => ev.id === id);
+  const index = storedData.events.findIndex(ev => ev.id === id);
   if (index < 0) {
-    throw new NotFoundError('Could not find event for id ' + id);
+    throw new NotFoundError(`Could not find event for id ${id}`);
   }
 
   storedData.events[index] = { ...data, id };
@@ -59,8 +62,8 @@ async function replace(id, data) {
 
 async function remove(id) {
   const storedData = await readData();
-  const updatedData = storedData.events.filter((ev) => ev.id !== id);
-  await writeData({events: updatedData});
+  const updatedData = storedData.events.filter(ev => ev.id !== id);
+  await writeData({ events: updatedData });
 }
 
 exports.getAll = getAll;

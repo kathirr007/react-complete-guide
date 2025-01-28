@@ -1,9 +1,14 @@
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const express = require('express');
 
 const eventRoutes = require('./routes/events');
 
 const app = express();
+
+const PORT = process.env.PORT || 8080;
+
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
@@ -21,4 +26,4 @@ app.use((error, req, res, next) => {
   res.status(status).json({ message });
 });
 
-app.listen(8080);
+app.listen(PORT);

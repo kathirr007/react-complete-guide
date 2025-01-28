@@ -9,7 +9,7 @@ export default function EventDetailsPage() {
     <>
       <Suspense key={params.eventId} fallback={<p style={{ textAlign: 'center' }}>Loading event...</p>}>
         <Await resolve={event}>
-          {loadedEvent => (<EventForm event={loadedEvent} method="PATCH" />)}
+          {loadedEvent => (<EventItem event={loadedEvent} />)}
         </Await>
       </Suspense>
       <Suspense fallback={<p style={{ textAlign: 'center' }}>Loading events...</p>}>

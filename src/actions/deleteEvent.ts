@@ -1,7 +1,7 @@
 import { type ActionFunctionArgs, redirect } from 'react-router';
 
 export async function deleteEvent({ request, params }: ActionFunctionArgs) {
-  const response = await fetch(`http://localhost:8080/events/${params.eventId}`, {
+  const response = await fetch(`${baseUrl}/events/${params.eventId}`, {
     // method: 'DELETE'
     method: request.method
   });
