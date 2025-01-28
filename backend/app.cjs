@@ -18,6 +18,15 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', async (req, res, next) => {
+  try {
+    res.json({ message: 'React router app backend is working fine.' });
+  }
+  catch (error) {
+    next(error);
+  }
+});
+
 app.use('/events', eventRoutes);
 
 app.use((error, req, res, next) => {
@@ -27,3 +36,5 @@ app.use((error, req, res, next) => {
 });
 
 app.listen(PORT);
+
+module.exports = app;
