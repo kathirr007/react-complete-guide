@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.cjs",
+      "src": "app.cjs",
       "use": "@vercel/node"
     }
   ],
-  "redirects": [
+  "rewrites": [
     {
       "src": "/(.*)",
-      "dest": "index.cjs"
+      "dest": "app.cjs"
     }
   ]
 }
