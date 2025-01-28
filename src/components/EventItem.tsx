@@ -1,14 +1,25 @@
-import { Link } from 'react-router';
+import { Link, useSubmit } from 'react-router';
 import classes from './EventItem.module.css';
 
 function EventItem({ event }: Readonly<{ event: any }>) {
+  const submit = useSubmit();
+
   function startDeleteHandler() {
-    // ...
+    // eslint-disable-next-line no-alert
+    const proceed = confirm('Are you sure to delete the event?');
+
+    if (proceed) {
+      submit(null, { method: 'DELETE' });
+    }
   }
 
   const navigate = useNavigate();
   function goBack() {
     navigate('/events');
+  }
+
+  function goToEdit() {
+    navigate('edit');
   }
 
   return (
@@ -21,7 +32,10 @@ function EventItem({ event }: Readonly<{ event: any }>) {
         <button type="button" onClick={goBack}>
           Back
         </button>
-        <Link to="edit">Edit</Link>
+        <button type="button" onClick={goToEdit}>
+          {/* <Link to="edit">Edit</Link> */}
+          Edit
+        </button>
         <button type="button" onClick={startDeleteHandler}>Delete</button>
       </menu>
     </article>

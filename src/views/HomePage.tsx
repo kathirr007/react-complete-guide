@@ -1,5 +1,7 @@
 export default function HomePage() {
   return (
-    <h1>Home Page</h1>
+    <PageContent title="Welcome!">
+      <p>Browse all Amazing React Events.</p>
+    </PageContent>
   );
 }

@@ -1,33 +1,15 @@
-import { useEffect, useState } from 'react';
-import { useLoaderData, useRouteLoaderData } from 'react-router';
+import { Suspense } from 'react';
+import { Await, useLoaderData } from 'react-router';
 
 function EventsPage() {
-  /* const [isLoading, setIsLoading] = useState(false);
-  const [fetchedEvents, setFetchedEvents] = useState();
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    async function fetchEvents() {
-      setIsLoading(true);
-      const response = await fetch('http://localhost:8080/events');
-
-      if (!response.ok) {
-        setError('Fetching events failed.');
-      }
-      else {
-        const resData = await response.json();
-        setFetchedEvents(resData.events);
-      }
-      setIsLoading(false);
-    }
-
-    fetchEvents();
-  }, []); */
-
-  const events = useLoaderData();
+  const { events } = useLoaderData();
 
   return (
-    <EventsList events={events} />
+    <Suspense fallback={<p style={{ textAlign: 'center' }}>Loading Events...</p>}>
+      <Await resolve={events}>
+        {loadEvents => (<EventsList events={loadEvents} />)}
+      </Await>
+    </Suspense>
   );
 }
 

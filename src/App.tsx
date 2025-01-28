@@ -21,6 +21,7 @@
 // BONUS: Add another (nested) layout route that adds the <EventNavigation> component above all /events... page components
 
 import { createBrowserRouter, RouterProvider } from 'react-router';
+import { ToastContainer } from 'react-toastify';
 import EventsLayout from './layouts/EventsLayout';
 import RootLayout from './layouts/RootLayout';
 import { eventLoader } from './loaders/eventLoader';
@@ -31,31 +32,40 @@ import EventDetailsPage from './views/EventDetailsPage';
 import EventsPage from './views/EventsPage';
 import HomePage from './views/HomePage';
 import NewEventPage from './views/NewEventPage';
+import NewsletterPage from './views/NewsletterPage';
 
 const router = createBrowserRouter([
   { path: '/', element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <HomePage /> }
-    ]
-  },
-  { path: 'events', element: <EventsLayout />, errorElement: <ErrorPage />,
-    children: [
-      { index: true, element: <EventsPage />, loader: eventsLoader },
-      { path: ':eventId', id: 'event-detail', loader: eventLoader,
+      { index: true, element: <HomePage /> },
+      { path: 'events', element: <EventsLayout />, errorElement: <ErrorPage />,
         children: [
-          { index: true, element: <EventDetailsPage />, loader: eventLoader },
-          { path: 'edit', element: <EditEventPage /> }
+          { index: true, element: <EventsPage />, loader: eventsLoader },
+          { path: ':eventId', id: 'event-detail', loader: eventLoader,
+            children: [
+              { index: true, element: <EventDetailsPage />, loader: eventLoader, action: deleteEvent },
+              { path: 'edit', element: <EditEventPage />, action: eventAction }
+            ]
+          },
+          { path: 'new', element: <NewEventPage />, action: eventAction }
         ]
       },
-      { path: 'new', element: <NewEventPage /> }
+      {
+        path: 'newsletter',
+        element: <NewsletterPage />,
+        action: newsletterSignup
+      }
     ]
-  }
+  },
 ]);
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <>
+      <RouterProvider router={router} />
+      <ToastContainer />
+    </>
   );
 }
 

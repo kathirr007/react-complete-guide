@@ -14,7 +14,7 @@ export default defineConfig({
       eventsToWatch: ['add', 'unlink']
     }),
     ViteRestartPlugin({
-      restart: ['./src/hooks/**/*.*', './src/utils/**/*.*', './src/store/**/*.*']
+      restart: ['./src/hooks/**/*.*', './src/utils/**/*.*', './src/loaders/**/*.*', './src/actions/**/*.*', './src/store/**/*.*']
     }),
     AutoImport({
       dts: './auto-imports.d.ts',
@@ -25,6 +25,8 @@ export default defineConfig({
       dirs: [
         './src/hooks/**',
         './src/utils/**',
+        './src/loaders/**',
+        './src/actions/**',
         './src/store/**'
       ],
       eslintrc: {

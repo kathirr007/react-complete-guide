@@ -1,4 +1,4 @@
-export async function eventsLoader() {
+export async function loadEvents() {
   const response = await fetch('http://localhost:8080/events');
   if (!response.ok) {
     // handle errors
@@ -8,4 +8,10 @@ export async function eventsLoader() {
     const resData = await response.json();
     return resData.events;
   }
+}
+
+export function eventsLoader() {
+  return {
+    events: loadEvents()
+  };
 }

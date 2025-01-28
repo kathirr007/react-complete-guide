@@ -192,6 +192,16 @@
     "MainNavigation": true,
     "LayoutsEventsLayout": true,
     "LayoutsRootLayout": true,
-    "PageContent": true
+    "PageContent": true,
+    "eventLoader": true,
+    "eventsLoader": true,
+    "newEvent": true,
+    "deleteEvent": true,
+    "eventAction": true,
+    "NewsletterSignup": true,
+    "action": true,
+    "newsletterSignup": true,
+    "loadEvents": true,
+    "loadEvent": true
   }
 }
