@@ -6,8 +6,16 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const EventForm: typeof import('@/components/EventForm.tsx')['EventForm']
+  const EventItem: typeof import('@/components/EventItem.tsx')['EventItem']
+  const EventsList: typeof import('@/components/EventsList.tsx')['EventsList']
+  const EventsNavigation: typeof import('@/components/EventsNavigation.tsx')['EventsNavigation']
   const FavoritesFavoriteItem: typeof import('@/components/Favorites/FavoriteItem.tsx')['FavoriteItem']
+  const LayoutsEventsLayout: typeof import('@/layouts/EventsLayout.tsx')['EventsLayout']
+  const LayoutsRootLayout: typeof import('@/layouts/RootLayout.tsx')['RootLayout']
+  const MainNavigation: typeof import('@/components/MainNavigation.tsx')['MainNavigation']
   const NavNavigation: typeof import('@/components/Nav/Navigation.tsx')['Navigation']
+  const PageContent: typeof import('@/components/PageContent.tsx')['PageContent']
   const ProductsContext: typeof import('./src/utils/index')['ProductsContext']
   const ProductsProductItem: typeof import('@/components/Products/ProductItem.tsx')['ProductItem']
   const TOGGLE_FAV: typeof import('./src/store/actions/products')['TOGGLE_FAV']
@@ -121,10 +129,4 @@ declare global {
   const useVirtualList: typeof import('ahooks')['useVirtualList']
   const useWebSocket: typeof import('ahooks')['useWebSocket']
   const useWhyDidYouUpdate: typeof import('ahooks')['useWhyDidYouUpdate']
-}
-// for type re-export
-declare global {
-  // @ts-ignore
-  export type { Product } from './src/store/reducers/products'
-  import('./src/store/reducers/products')
 }

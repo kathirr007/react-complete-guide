@@ -184,6 +184,14 @@
     "products": true,
     "toggleFav": true,
     "Product": true,
-    "ProductsContext": true
+    "ProductsContext": true,
+    "EventForm": true,
+    "EventItem": true,
+    "EventsList": true,
+    "EventsNavigation": true,
+    "MainNavigation": true,
+    "LayoutsEventsLayout": true,
+    "LayoutsRootLayout": true,
+    "PageContent": true
   }
 }

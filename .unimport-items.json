@@ -1,23 +1,43 @@
 [
   {
-    "from": "@/components/Favorites/FavoriteItem.tsx",
-    "name": "FavoriteItem",
-    "as": "FavoritesFavoriteItem"
+    "from": "@/components/EventForm.tsx",
+    "name": "EventForm",
+    "as": "EventForm"
   },
   {
-    "from": "@/components/Nav/Navigation.tsx",
-    "name": "Navigation",
-    "as": "NavNavigation"
+    "from": "@/components/EventItem.tsx",
+    "name": "EventItem",
+    "as": "EventItem"
   },
   {
-    "from": "@/components/Products/ProductItem.tsx",
-    "name": "ProductItem",
-    "as": "ProductsProductItem"
+    "from": "@/components/EventsList.tsx",
+    "name": "EventsList",
+    "as": "EventsList"
   },
   {
-    "from": "@/components/UI/Card.tsx",
-    "name": "Card",
-    "as": "UICard"
+    "from": "@/components/EventsNavigation.tsx",
+    "name": "EventsNavigation",
+    "as": "EventsNavigation"
+  },
+  {
+    "from": "@/components/MainNavigation.tsx",
+    "name": "MainNavigation",
+    "as": "MainNavigation"
+  },
+  {
+    "from": "@/components/PageContent.tsx",
+    "name": "PageContent",
+    "as": "PageContent"
+  },
+  {
+    "from": "@/layouts/EventsLayout.tsx",
+    "name": "EventsLayout",
+    "as": "LayoutsEventsLayout"
+  },
+  {
+    "from": "@/layouts/RootLayout.tsx",
+    "name": "RootLayout",
+    "as": "LayoutsRootLayout"
   },
   {
     "from": "react",
@@ -553,36 +573,5 @@
     "from": "ahooks",
     "name": "useWhyDidYouUpdate",
     "as": "useWhyDidYouUpdate"
-  },
-  {
-    "name": "ProductsContext",
-    "as": "ProductsContext",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/index.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "TOGGLE_FAV",
-    "as": "TOGGLE_FAV",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/actions/products.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "toggleFav",
-    "as": "toggleFav",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/actions/products.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "default",
-    "as": "products",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/reducers/products.ts",
-    "__source": "dir"
-  },
-  {
-    "name": "Product",
-    "as": "Product",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/store/reducers/products.ts",
-    "type": true,
-    "__source": "dir"
   }
 ]
