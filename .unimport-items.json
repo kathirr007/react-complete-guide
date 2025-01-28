@@ -582,61 +582,61 @@
   {
     "name": "isDevBuild",
     "as": "isDevBuild",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/useHttp.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/utils/useHttp.ts",
     "__source": "dir"
   },
   {
     "name": "isProBuild",
     "as": "isProBuild",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/useHttp.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/utils/useHttp.ts",
     "__source": "dir"
   },
   {
     "name": "baseUrl",
     "as": "baseUrl",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/useHttp.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/utils/useHttp.ts",
     "__source": "dir"
   },
   {
     "name": "loadEvent",
     "as": "loadEvent",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/loaders/eventLoader.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/loaders/eventLoader.ts",
     "__source": "dir"
   },
   {
     "name": "eventLoader",
     "as": "eventLoader",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/loaders/eventLoader.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/loaders/eventLoader.ts",
     "__source": "dir"
   },
   {
     "name": "loadEvents",
     "as": "loadEvents",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/loaders/eventsLoader.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/loaders/eventsLoader.ts",
     "__source": "dir"
   },
   {
     "name": "eventsLoader",
     "as": "eventsLoader",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/loaders/eventsLoader.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/loaders/eventsLoader.ts",
     "__source": "dir"
   },
   {
     "name": "deleteEvent",
     "as": "deleteEvent",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/actions/deleteEvent.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/actions/deleteEvent.ts",
     "__source": "dir"
   },
   {
     "name": "eventAction",
     "as": "eventAction",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/actions/eventAction.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/actions/eventAction.ts",
     "__source": "dir"
   },
   {
     "name": "newsletterSignup",
     "as": "newsletterSignup",
-    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/actions/newsletterSignup.ts",
+    "from": "D:/Webprojects/Practices/React/react-complete-guide/src/actions/newsletterSignup.ts",
     "__source": "dir"
   }
 ]
