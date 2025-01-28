@@ -1,4 +1,4 @@
-const express = require('express');
+const app = require('express');
 
 const { getAll, get, add, replace, remove } = require('../data/event');
 const {
@@ -7,7 +7,7 @@ const {
   isValidImageUrl
 } = require('../util/validation');
 
-const router = express.Router();
+const router = app.Router();
 
 router.get('/', async (req, res, next) => {
   try {
@@ -32,7 +32,7 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   const data = req.body;
 
-  let errors = {};
+  const errors = {};
 
   if (!isValidText(data.title)) {
     errors.title = 'Invalid title.';
@@ -69,7 +69,7 @@ router.post('/', async (req, res, next) => {
 router.patch('/:id', async (req, res, next) => {
   const data = req.body;
 
-  let errors = {};
+  const errors = {};
 
   if (!isValidText(data.title)) {
     errors.title = 'Invalid title.';
