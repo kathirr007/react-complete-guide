@@ -4,7 +4,7 @@ This repository is the coding practice repository for the course React The Compl
 
 ## Features Completed
 
-### React Context API [Live Demo](https://react-food-order-app-chi.vercel.app/)
+### React Context API <a noopener noreferrer taret="_blank" href="https://react-food-order-app-chi.vercel.app/">Live Demo</a>
 ---
 #### Features Learned
 - React Context API
@@ -14,7 +14,7 @@ This repository is the coding practice repository for the course React The Compl
 - React Context Component to use Context using **ContextProvider**
 - React Context API hooks(utilities) like **use**, **useContext**.
 
-### React Forms [Live Demo](https://forms-opinions-board.vercel.app/)
+### React Forms <a noopener noreferrer taret="_blank" href="https://forms-opinions-board.vercel.app/">Live Demo</a>
 ---
 #### Features Learned
 - Managing Form Submisions via generic submission handler and React Form Actions
@@ -23,7 +23,7 @@ This repository is the coding practice repository for the course React The Compl
 - Handling Forms with React 19 Form Action using **useActionState**
 - Created a dummy app which uses React Context API and Form handling using Form Actions to handle form submission, form state, form reset, form validation.
 
-### React Router [Live Demo](https://react-router-pearl-six.vercel.app/)
+### React Router <a noopener noreferrer taret="_blank" href="https://react-router-pearl-six.vercel.app/">Live Demo</a>
 ---
 #### Features Learned
 - React Router Definitions
