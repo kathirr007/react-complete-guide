@@ -69,6 +69,7 @@
     "useInput": true,
     "NewOpinion": true,
     "Opinion": true,
-    "Opinions": true
+    "Opinions": true,
+    "Submit": true
   }
 }

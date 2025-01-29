@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react';
 import fg from 'fast-glob';
 import { minimatch } from 'minimatch';
 import AutoImport from 'unplugin-auto-import/vite';
-import Components from 'unplugin-react-components/vite';
 
 import { defineConfig } from 'vite';
 import Pages from 'vite-plugin-pages';

@@ -38,6 +38,7 @@ declare global {
   const ResultModal: typeof import('@/components/ResultModal.tsx')['ResultModal']
   const Signup: typeof import('@/components/Signup.jsx')['Signup']
   const StateLogin: typeof import('@/components/StateLogin.jsx')['StateLogin']
+  const Submit: typeof import('@/components/Submit.jsx')['Submit']
   const TestCalculator: typeof import('@/components/test/Calculator.tsx')['Calculator']
   const TimerChallenge: typeof import('@/components/TimerChallenge.tsx')['TimerChallenge']
   const UIErrorBlock: typeof import('@/components/UI/ErrorBlock.jsx')['ErrorBlock']

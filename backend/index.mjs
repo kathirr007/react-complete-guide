@@ -1,10 +1,15 @@
 import fs from 'node:fs/promises';
-
+import path from 'node:path';
+import cors from 'cors';
 import express from 'express';
+
+const app = express();
+const PORT = process.env.PORT || 3010;
+const __currentDirname = path.resolve();
 
 async function loadOpinions() {
   try {
-    const dbFileData = await fs.readFile('./db.json');
+    const dbFileData = await fs.readFile(path.join(__currentDirname, './db.json'));
     const parsedData = JSON.parse(dbFileData);
     return parsedData.opinions;
   }
@@ -18,7 +23,7 @@ async function saveOpinion(opinion) {
   const newOpinion = { id: new Date().getTime(), votes: 0, ...opinion };
   opinions.unshift(newOpinion);
   const dataToSave = { opinions };
-  await fs.writeFile('./db.json', JSON.stringify(dataToSave, null, 2));
+  await fs.writeFile(path.join(__currentDirname, './db.json'), JSON.stringify(dataToSave, null, 2));
   return newOpinion;
 }
 
@@ -29,7 +34,7 @@ async function upvoteOpinion(id) {
     return null;
   }
   opinion.votes++;
-  await fs.writeFile('./db.json', JSON.stringify({ opinions }, null, 2));
+  await fs.writeFile(path.join(__currentDirname, './db.json'), JSON.stringify({ opinions }, null, 2));
   return opinion;
 }
 
@@ -40,11 +45,11 @@ async function downvoteOpinion(id) {
     return null;
   }
   opinion.votes--;
-  await fs.writeFile('./db.json', JSON.stringify({ opinions }, null, 2));
+  await fs.writeFile(path.join(__currentDirname, './db.json'), JSON.stringify({ opinions }, null, 2));
   return opinion;
 }
 
-const app = express();
+app.use(cors());
 
 // CORS
 app.use((req, res, next) => {
@@ -56,6 +61,14 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
+app.get('/', async (req, res) => {
+  try {
+    res.json({ message: 'React Forms Opinions api working fine.' });
+  }
+  catch (error) {
+    res.status(500).json({ error: 'Error loading opinions.' });
+  }
+});
 app.get('/opinions', async (req, res) => {
   try {
     const opinions = await loadOpinions();
@@ -116,6 +129,8 @@ app.post('/opinions/:id/downvote', async (req, res) => {
   }
 });
 
-app.listen(3010, () => {
-  console.log('Server running on http://localhost:3010');
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
+
+export default app;
