@@ -47,6 +47,19 @@ This repository is the coding practice repository for the course React The Compl
 - React Router hooks(utilities) like **useNavigate**, **useNavigation**, **useRoutes**, **useRouteLoaderData**, **useLoaderData**, **useActionData**, **redirect**
 - Created a **<a rel="noopener noreferrer" target="_blank" href="https://react-router-pearl-six.vercel.app/">demo app</a>** with dummy backend api which uses **React-Router** and its hooks
 
+### React Animations <a rel="noopener noreferrer" target="_blank" href="https://react-animations-framer-motion.vercel.app/">Live Demo</a>
+---
+#### Features Learned
+- How to implement transitions and animations using plain CSS **animation** and **transitions**
+- How to implement advanced animations using third party library <a rel="noopener noreferrer" target="_blank" href="https://motion.dev/docs">**Framer-Motion**</a>
+
+### React Patterns <a rel="noopener noreferrer" target="_blank" href="https://reactpatterns.vercel.app/">Live Demo</a>
+---
+#### Features Learned
+- How to create tightly coupled components like **Accordion**, **Select Dropdown**
+- How to create compound component like **Search with Input**
+
+<br />
 
 # How To Use
 
