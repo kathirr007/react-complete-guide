@@ -10,9 +10,9 @@ This repository is the coding practice repository for the course React The Compl
 - React Context API
 - React Context Creation with **createContext**, **ContextProvider**, **Reducers**
 - React Context API Reducers with **action** and **payload**
-- How to use React Context API in Components using **useContext** hook
+- How to use React Context API in Components using **useContext** hook?
 - React Context Component to use Context using **ContextProvider**
-- React Context API hooks(utilities) like **use**, **useContext**.
+- React Context API hooks(utilities) like **use**, **useContext**
 
 ### React Forms <a rel="noopener noreferrer" target="_blank" href="https://forms-opinions-board.vercel.app/">Live Demo</a>
 ---
@@ -21,7 +21,18 @@ This repository is the coding practice repository for the course React The Compl
 - Managing and getting user Inputs via **State** and **generic event Handlers**, via **Refs** and via **FormData** and **Browser APIs**
 - Validating Form Inputs with custom hooks and third party libraries
 - Handling Forms with React 19 Form Action using **useActionState**
-- Created a dummy app which uses React Context API and Form handling using Form Actions to handle form submission, form state, form reset, form validation.
+- Created a demo with dummy backend api app which uses React Context API and Form handling using Form Actions to handle form submission, form state, form reset, form validation
+
+### React-Redux, Redux Toolkit <a rel="noopener noreferrer" target="_blank" href="https://react-complete-guide-redux.vercel.app/">Live Demo</a>
+---
+#### Features Learned
+- What and Why to use Redux inplace of React's Context API?
+- How to use Redux instead of React Context API?
+- How to create Redux Store and use it in the React App?
+- What is **reducers**, **actions**?
+- Created moudular Redux store with mutiple slices of the Redux Store using Redux Toolkit hooks **createSlice**, **configureStore**, **combineReducers** and use them in App using **React-Redux** **Provider** component
+- Created a **<a rel="noopener noreferrer" target="_blank" href="https://react-complete-guide-redux.vercel.app/">demo app</a>** with dummy backend api which uses **React-Redux** and 
+**Redux-Toolkit**
 
 ### React Router <a rel="noopener noreferrer" target="_blank" href="https://react-router-pearl-six.vercel.app/">Live Demo</a>
 ---
@@ -33,7 +44,8 @@ This repository is the coding practice repository for the course React The Compl
 - Route Loaders and Actions to fetch or post data to backend
 - Defer Loaders and Actions
 - React Router Components like **Link**, **NavLink**, **RouteBrovider**, **Form**, **fetcher.Form**, **Await**, **Outlet**,  etc.
-- React Router hooks(utilities) like **useNavigate**, **useNavigation**, **useRoutes**, **useRouteLoaderData**, **useLoaderData**, **useActionData**, **redirect**.
+- React Router hooks(utilities) like **useNavigate**, **useNavigation**, **useRoutes**, **useRouteLoaderData**, **useLoaderData**, **useActionData**, **redirect**
+- Created a **<a rel="noopener noreferrer" target="_blank" href="https://react-router-pearl-six.vercel.app/">demo app</a>** with dummy backend api which uses **React-Router** and its hooks
 
 
 # How To Use
