@@ -70,6 +70,9 @@
     "NewOpinion": true,
     "Opinion": true,
     "Opinions": true,
-    "Submit": true
+    "Submit": true,
+    "baseUrl": true,
+    "isDevBuild": true,
+    "isProBuild": true
   }
 }
