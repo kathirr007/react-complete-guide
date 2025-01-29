@@ -11,6 +11,13 @@ function isValidImageUrl(value) {
   return value && value.startsWith('http');
 }
 
-exports.isValidText = isValidText;
-exports.isValidDate = isValidDate;
-exports.isValidImageUrl = isValidImageUrl;
+function isValidEmail(value) {
+  return value && value.includes('@');
+}
+
+export {
+  isValidDate,
+  isValidEmail,
+  isValidImageUrl,
+  isValidText
+};

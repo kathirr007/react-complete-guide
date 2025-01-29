@@ -6,6 +6,7 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const AuthForm: typeof import('@/components/AuthForm.tsx')['AuthForm']
   const Cart: typeof import('@/components/Cart.tsx')['Cart']
   const CartContext: typeof import('./src/store/CartContext.jsx')['CartContext']
   const CartContextProvider: typeof import('./src/store/CartContext.jsx')['CartContextProvider']

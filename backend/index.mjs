@@ -1,8 +1,9 @@
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const express = require('express');
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import express from 'express';
 
-const eventRoutes = require('./routes/events');
+import authRoutes from './routes/auth.js';
+import eventRoutes from './routes/events.js';
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.get('/', async (req, res, next) => {
   }
 });
 
+app.use(authRoutes);
 app.use('/events', eventRoutes);
 
 app.use((error, req, res, next) => {
@@ -35,6 +37,8 @@ app.use((error, req, res, next) => {
   res.status(status).json({ message });
 });
 
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
 
-module.exports = app;
+export default app;

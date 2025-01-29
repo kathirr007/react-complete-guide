@@ -1,11 +1,9 @@
-const fs = require('node:fs/promises');
-const path = require('node:path');
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { v4 as generateId } from 'uuid';
+import { NotFoundError } from '../util/errors.js';
 
 const __currentDirname = path.resolve();
-
-const { v4: generateId } = require('uuid');
-
-const { NotFoundError } = require('../util/errors');
 
 async function readData() {
   const data = await fs.readFile(path.join(__currentDirname, 'events.json'), 'utf8');
@@ -66,8 +64,10 @@ async function remove(id) {
   await writeData({ events: updatedData });
 }
 
-exports.getAll = getAll;
-exports.get = get;
-exports.add = add;
-exports.replace = replace;
-exports.remove = remove;
+export {
+  add,
+  get,
+  getAll,
+  remove,
+  replace
+};
