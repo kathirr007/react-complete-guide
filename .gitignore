@@ -30,3 +30,4 @@ dist-ssr
 *.eslintcache
 .vercel
 .env
+*.env
