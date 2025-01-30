@@ -4,7 +4,7 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_REACT_ROUTER_PROJECT_ID }}
 on:
   push:
-    branches: [ "21_multi-page_react_router" ]
+    branches: [ "21_multi-page_react_router", "22_authentication" ]
 
 jobs:
   Deploy-Production:
