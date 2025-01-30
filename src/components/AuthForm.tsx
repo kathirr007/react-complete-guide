@@ -13,7 +13,7 @@ function AuthForm() {
 
   useEffect(() => {
     if (data && data.errors) {
-      toast(ToastMessage,
+      toast.error(ToastMessage,
         {
           data: {
             title: 'Auth Error..!',
