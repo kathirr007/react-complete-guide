@@ -1,7 +1,9 @@
-import { Link, useSubmit } from 'react-router';
+import { Link, useRouteLoaderData, useSubmit } from 'react-router';
 import classes from './EventItem.module.css';
 
 function EventItem({ event }: Readonly<{ event: any }>) {
+  const token = useRouteLoaderData('root');
+
   const submit = useSubmit();
 
   function startDeleteHandler() {
@@ -32,11 +34,15 @@ function EventItem({ event }: Readonly<{ event: any }>) {
         <button type="button" onClick={goBack}>
           Back
         </button>
-        <button type="button" onClick={goToEdit}>
-          {/* <Link to="edit">Edit</Link> */}
-          Edit
-        </button>
-        <button type="button" onClick={startDeleteHandler}>Delete</button>
+        {token && (
+          <>
+            <button type="button" onClick={goToEdit}>
+              {/* <Link to="edit">Edit</Link> */}
+              Edit
+            </button>
+            <button type="button" onClick={startDeleteHandler}>Delete</button>
+          </>
+        )}
       </menu>
     </article>
   );

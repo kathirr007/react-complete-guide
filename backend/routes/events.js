@@ -1,6 +1,8 @@
 import app from 'express';
 
 import { add, get, getAll, remove, replace } from '../data/event.js';
+import { checkAuth } from '../util/auth.js';
+
 import {
   isValidDate, isValidImageUrl, isValidText
 } from '../util/validation.js';
@@ -26,6 +28,8 @@ router.get('/:id', async (req, res, next) => {
     next(error);
   }
 });
+
+router.use(checkAuth);
 
 router.post('/', async (req, res, next) => {
   const data = req.body;

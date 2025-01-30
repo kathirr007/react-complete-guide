@@ -2,15 +2,6 @@ import { useFetcher } from 'react-router';
 import { toast } from 'react-toastify';
 import classes from './NewsletterSignup.module.css';
 
-function Msg({ data }: Readonly<{ data: { title: string; message: string } }>) {
-  return (
-    <div>
-      <h3 style={{margin:0}}>{data.title}</h3>
-      {data.message}
-    </div>
-  );
-}
-
 function NewsletterSignup() {
   const fetcher = useFetcher();
 
@@ -18,7 +9,7 @@ function NewsletterSignup() {
 
   useEffect(() => {
     if (state === 'idle' && data && data.message) {
-      toast(Msg,
+      toast(ToastMessage,
         {
           data: {
             title: 'Success!',

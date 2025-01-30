@@ -3,6 +3,9 @@ import { type ActionFunctionArgs, redirect } from 'react-router';
 export async function eventAction({ request, params }: ActionFunctionArgs) {
   const data = await request.formData();
   const eventData = Object.fromEntries(data.entries());
+  const { token } = getAuthToken();
+
+  console.log(token);
 
   let url = `${baseUrl}/events`;
 
@@ -13,7 +16,8 @@ export async function eventAction({ request, params }: ActionFunctionArgs) {
   const response = await fetch(url, {
     method: request.method,
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
     },
     body: JSON.stringify(eventData)
   });

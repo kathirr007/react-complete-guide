@@ -26,6 +26,7 @@ import EventsLayout from './layouts/EventsLayout';
 import RootLayout from './layouts/RootLayout';
 import { eventLoader } from './loaders/eventLoader';
 import { eventsLoader } from './loaders/eventsLoader';
+import AuthenticationPage from './views/AuthenticationPage';
 import EditEventPage from './views/EditEventPage';
 import ErrorPage from './views/ErrorPage';
 import EventDetailsPage from './views/EventDetailsPage';
@@ -37,6 +38,8 @@ import NewsletterPage from './views/NewsletterPage';
 const router = createBrowserRouter([
   { path: '/', element: <RootLayout />,
     errorElement: <ErrorPage />,
+    loader: tokenLoader,
+    id: 'root',
     children: [
       { index: true, element: <HomePage /> },
       { path: 'events', element: <EventsLayout />, errorElement: <ErrorPage />,
@@ -45,19 +48,34 @@ const router = createBrowserRouter([
           { path: ':eventId', id: 'event-detail', loader: eventLoader,
             children: [
               { index: true, element: <EventDetailsPage />, loader: eventLoader, action: deleteEvent },
-              { path: 'edit', element: <EditEventPage />, action: eventAction }
+              { path: 'edit', element: <EditEventPage />, action: eventAction, loader: checkAuthLoader }
             ]
           },
-          { path: 'new', element: <NewEventPage />, action: eventAction }
+          { path: 'new',
+            element: <NewEventPage />,
+            loader: checkAuthLoader,
+            action: eventAction
+          }
+
         ]
       },
       {
         path: 'newsletter',
         element: <NewsletterPage />,
         action: newsletterSignup
+      },
+      {
+        path: 'auth',
+        element: <AuthenticationPage />,
+        action: authAction,
+        loader: checkUserLoader
+      },
+      {
+        path: 'logout',
+        action: logoutAction
       }
     ]
-  },
+  }
 ]);
 
 function App() {

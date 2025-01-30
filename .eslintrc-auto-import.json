@@ -203,6 +203,15 @@
     "newsletterSignup": true,
     "loadEvents": true,
     "loadEvent": true,
-    "AuthForm": true
+    "AuthForm": true,
+    "authAction": true,
+    "ToastMessage": true,
+    "getAuthToken": true,
+    "removeAuthToken": true,
+    "logoutAction": true,
+    "tokenLoader": true,
+    "checkAuthLoader": true,
+    "checkUserLoader": true,
+    "getTokenDuration": true
   }
 }

@@ -34,6 +34,17 @@
   --color-primary-700: #fbc14d;
   --color-primary-800: #fab833;
   --color-primary-900: #f6ad1b;
+  --color-red-50: oklch(97.1% 0.013 17.38deg);
+  --color-red-100: oklch(93.6% 0.032 17.717deg);
+  --color-red-200: oklch(88.5% 0.062 18.334deg);
+  --color-red-300: oklch(80.8% 0.114 19.571deg);
+  --color-red-400: oklch(70.4% 0.191 22.216deg);
+  --color-red-500: oklch(63.7% 0.237 25.331deg);
+  --color-red-600: oklch(57.7% 0.245 27.325deg);
+  --color-red-700: oklch(50.5% 0.213 27.518deg);
+  --color-red-800: oklch(44.4% 0.177 26.899deg);
+  --color-red-900: oklch(39.6% 0.141 25.723deg);
+  --color-red-950: oklch(25.8% 0.092 26.042deg);
 }
 
 body {
@@ -44,4 +55,8 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.form-errors {
+  color: var(--color-red-400);
 }

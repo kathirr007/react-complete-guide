@@ -1,5 +1,5 @@
-import * as bcrypt from 'bcryptjs';
-import * as jsonwebtoken from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
+import jsonwebtoken from 'jsonwebtoken';
 import { NotAuthError } from './errors.js';
 
 const { compare } = bcrypt;

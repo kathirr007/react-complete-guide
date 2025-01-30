@@ -1,4 +1,4 @@
-import * as bcrypt from 'bcryptjs';
+import bcrypt from 'bcryptjs';
 import { v4 as generateId } from 'uuid';
 import { NotFoundError } from '../util/errors.js';
 import { readData, writeData } from './util.js';

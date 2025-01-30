@@ -40,6 +40,11 @@
     "as": "PageContent"
   },
   {
+    "from": "@/components/ToastMessage.tsx",
+    "name": "ToastMessage",
+    "as": "ToastMessage"
+  },
+  {
     "from": "@/layouts/EventsLayout.tsx",
     "name": "EventsLayout",
     "as": "LayoutsEventsLayout"
@@ -585,6 +590,18 @@
     "as": "useWhyDidYouUpdate"
   },
   {
+    "name": "getTokenDuration",
+    "as": "getTokenDuration",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/auth.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "getAuthToken",
+    "as": "getAuthToken",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/auth.ts",
+    "__source": "dir"
+  },
+  {
     "name": "isDevBuild",
     "as": "isDevBuild",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/useHttp.ts",
@@ -600,6 +617,18 @@
     "name": "baseUrl",
     "as": "baseUrl",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/utils/useHttp.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "checkAuthLoader",
+    "as": "checkAuthLoader",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/loaders/checkAuthLoader.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "checkUserLoader",
+    "as": "checkUserLoader",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/loaders/checkUserLoader.ts",
     "__source": "dir"
   },
   {
@@ -627,6 +656,18 @@
     "__source": "dir"
   },
   {
+    "name": "tokenLoader",
+    "as": "tokenLoader",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/loaders/tokenLoader.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "authAction",
+    "as": "authAction",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/actions/authAction.ts",
+    "__source": "dir"
+  },
+  {
     "name": "deleteEvent",
     "as": "deleteEvent",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/actions/deleteEvent.ts",
@@ -636,6 +677,12 @@
     "name": "eventAction",
     "as": "eventAction",
     "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/actions/eventAction.ts",
+    "__source": "dir"
+  },
+  {
+    "name": "logoutAction",
+    "as": "logoutAction",
+    "from": "C:/Users/kathik/Kathir/Practice/React/react-complete-guide/src/actions/logoutAction.ts",
     "__source": "dir"
   },
   {
